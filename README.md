@@ -1,2 +1,2 @@
-# timetable-5A
-Jadwal Pelajaran Semester 5
+# timetable-6A
+Jadwal Pelajaran Semester 6
