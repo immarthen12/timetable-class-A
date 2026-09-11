@@ -807,7 +807,7 @@ function renderSchedule() {
     else {
 
         todayType.textContent =
-            "💤 TIDUR DULU AJA, TIDAK ADA JADWAL";
+            "Tidak Ada Kelas";
 
     }
 
