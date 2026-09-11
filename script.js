@@ -800,14 +800,14 @@ function renderSchedule() {
     ) {
 
         todayType.textContent =
-            "🟢 KELAS REGULER";
+            "🟢 KELAS OFFLINE";
 
     }
 
     else {
 
         todayType.textContent =
-            "💤 TIDAK ADA KELAS";
+            "💤 TIDUR DULU AJA, TIDAK ADA JADWAL";
 
     }
 
