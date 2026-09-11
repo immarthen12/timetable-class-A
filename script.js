@@ -887,7 +887,7 @@ function renderSchedule() {
 
             note =
                 `<span class="online-note">
-                    🟢 Kelas Reguler
+                    🟢 Kelas Offline
                 </span>`;
 
         }
@@ -926,7 +926,7 @@ function renderSchedule() {
 
             rows = `
                 <div class="empty-day">
-                    Tidak ada jadwal.
+                    💤 TIDUR DULU AJA, TIDAK ADA JADWAL.
                 </div>
             `;
 
