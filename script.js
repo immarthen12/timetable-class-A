@@ -80,15 +80,15 @@ const jadwal = {
                 {
                     mulai: "13:30",
                     selesai: "15:00",
-                    matkul: "PEMBELAJARAN SAINS ANAK USIA DINI",
-                    dosen: "Yandra, S.Pd.i., M.Pd., / Ahdan Abdul Ghani, S.Pd."
+                    matkul: "PEMBELAJARAN LITERASI, NURNERASI ANAK USIA DINI",
+                    dosen: "Nuni Wahyuningsih, M.Pd."
                 },
 
                 {
                     mulai: "15:00",
                     selesai: "16:30",
-                    matkul: "PEMBELAJARAN KESENIAN ANAK USIA DINI",
-                    dosen: "Siti Mutmainah, M.Pd."
+                    matkul: "PEMBELAJARAN SAINS ANAK USIA DINI",
+                    dosen: "Yandra, S.Pd.I., M.Pd.,/Ahdan Abdul Ghani, S.Pd."
                 },
 
                 {
@@ -100,8 +100,8 @@ const jadwal = {
                 {
                     mulai: "17:00",
                     selesai: "18:30",
-                    matkul: "METODOLOGI PENELITIAN PENDIDIKAN ANAK USIA DINI",
-                    dosen: "Dr. Hasan Basri"
+                    matkul: "PENDIDIKAN KELUARGA",
+                    dosen: "Dede Iwanah, S.Pd., M.Pd.,/Nurhasanah, S.Pd."
                 }
 
             ],
@@ -117,15 +117,15 @@ const jadwal = {
                 {
                     mulai: "09:00",
                     selesai: "10:30",
-                    matkul: "PEMBELAJARAN LITERASI, NUMERASI ANAK USIA DINI",
-                    dosen: "Nuni Wahyuningsih, M.Pd."
+                    matkul: "PEMBELAJARAN KESENIAN ANAK USIA DINI",
+                    dosen: "Siti Mutmainah, M.Pd."
                 },
 
                 {
                     mulai: "10:30",
                     selesai: "12:00",
-                    matkul: "KULIAH KERJA NYATA",
-                    dosen: "Beni Bunyamin, S.Pd., M.Pd."
+                    matkul: "METODOLOGI PENELITIAN PENDIDIKAN ANAK USIA DINI",
+                    dosen: "Dr. Budiman"
                 },
 
                 {
@@ -137,15 +137,15 @@ const jadwal = {
                 {
                     mulai: "13:00",
                     selesai: "14:30",
-                    matkul: "PENDIDIKAN KELUARGA",
-                    dosen: "Dede Fahruroji, S.Ag., M.Sos."
+                    matkul: "BERMAIN DAN PERMAINAN ANAK USIA DINI",
+                    dosen: "Tety Srihayati, S.Pd., M.Pd."
                 },
 
                 {
                     mulai: "14:30",
                     selesai: "16:30",
-                    matkul: "BERMAIN DAN PERMAINAN ANAK USIA DINI",
-                    dosen: "Tety Srihayati, S.Pd., M.Pd."
+                    matkul: "KULIAH KERJA NYATA",
+                    dosen: "Dr. Hasan Basri"
                 }
 
             ]
