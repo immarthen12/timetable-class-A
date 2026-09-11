@@ -1,208 +1,205 @@
-/* =========================================
+/* =========================
    RESET
-========================================= */
+========================= */
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 
-/* =========================================
-   VARIABLE WARNA
-========================================= */
+/* =========================
+   VARIABLE
+========================= */
 
 :root {
 
-    --green: #2ebf91;
-    --green-dark: #159a76;
+    --background-1: #160b2b;
+    --background-2: #1b6d61;
 
-    --dark: #111827;
+    --card: rgba(255, 255, 255, 0.11);
 
-    --white: #ffffff;
+    --border: rgba(255, 255, 255, 0.18);
 
-    --gray: #6b7280;
+    --text: #ffffff;
+
+    --muted: rgba(255, 255, 255, 0.72);
+
+    --accent: #8ef5d0;
 
 }
 
 
-/* =========================================
+/* =========================
    BODY
-========================================= */
+========================= */
 
 body {
 
-    font-family: Arial, Helvetica, sans-serif;
-
     min-height: 100vh;
 
-    color: #1f2937;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text);
 
     background:
+
         radial-gradient(
-            circle at 10% 10%,
-            #8360c3,
+            circle at top left,
+            rgba(131, 96, 195, 0.45),
             transparent 35%
         ),
 
         radial-gradient(
-            circle at 90% 90%,
-            #2ebf91,
+            circle at bottom right,
+            rgba(46, 191, 145, 0.35),
             transparent 35%
         ),
 
-        #111827;
+        linear-gradient(
+            135deg,
+            var(--background-1),
+            var(--background-2)
+        );
 
 }
 
 
-/* =========================================
+/* =========================
    HERO
-========================================= */
+========================= */
 
 .hero {
 
-    padding: 35px 20px 25px;
+    padding:
+        35px
+        18px
+        30px;
+
+    text-align: center;
 
 }
 
 
 .hero-content {
 
-    max-width: 1100px;
+    max-width: 900px;
 
     margin: auto;
 
-    padding: 30px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 35px;
-
-    color: white;
-
-    border-radius: 30px;
-
-    background: rgba(255,255,255,0.12);
-
-    border: 1px solid rgba(255,255,255,0.2);
-
-    backdrop-filter: blur(15px);
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,0.3);
-
 }
 
 
-/* =========================================
+/* =========================
    FOTO KELAS
-========================================= */
-
-.photo-container {
-
-    width: 45%;
-
-}
-
+========================= */
 
 .class-photo {
 
-    width: 100%;
+    width: 145px;
 
-    height: 280px;
+    height: 145px;
 
     object-fit: cover;
 
-    border-radius: 20px;
+    border-radius: 50%;
 
-    border: 4px solid white;
+    border:
+        4px solid
+        rgba(255, 255, 255, 0.8);
 
-}
+    box-shadow:
+        0 15px 45px
+        rgba(0, 0, 0, 0.35);
 
-
-/* =========================================
-   INFORMASI KELAS
-========================================= */
-
-.class-info {
-
-    flex: 1;
+    margin-bottom: 18px;
 
 }
 
 
-.badge {
+/* =========================
+   JUDUL
+========================= */
 
-    display: inline-block;
+.eyebrow {
 
-    padding: 8px 14px;
+    font-size: 0.75rem;
 
-    border-radius: 20px;
+    font-weight: 800;
 
-    background: rgba(255,255,255,0.15);
+    letter-spacing: 2px;
 
-    font-size: 12px;
-
-    letter-spacing: 1px;
-    
-    color: #5ee7c0;
-
-    text-decoration: none;
+    color: var(--accent);
 
 }
 
 
-.class-info h1 {
+h1 {
 
-    font-size: 70px;
+    font-size:
+        clamp(
+            2rem,
+            7vw,
+            4rem
+        );
 
-    margin: 18px 0 10px;
-
-}
-
-
-.class-info h1 span {
-
-    color: #5ee7c0;
-
-}
-
-
-.class-info p {
-
-    opacity: 0.8;
-
-    margin-bottom: 20px;
+    margin:
+        8px 0;
 
 }
 
 
-/* =========================================
-   JAM
-========================================= */
+.subtitle {
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+
+}
+
+
+/* =========================
+   CLOCK
+========================= */
 
 .clock-box {
 
     display: inline-block;
 
-    padding: 15px 20px;
+    margin-top: 22px;
 
-    border-radius: 18px;
+    padding:
+        18px
+        28px;
 
-    background: rgba(0,0,0,0.25);
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 22px;
+
+    background:
+        rgba(0, 0, 0, 0.16);
+
+    backdrop-filter: blur(12px);
 
 }
 
 
 #clock {
 
-    font-size: 30px;
+    font-size:
+        clamp(
+            2.3rem,
+            10vw,
+            4rem
+        );
 
-    font-weight: bold;
+    font-weight: 800;
 
     letter-spacing: 2px;
 
@@ -211,186 +208,246 @@ body {
 
 #date {
 
-    font-size: 14px;
-
-    opacity: 0.8;
-
     margin-top: 5px;
 
-}
-
-
-/* =========================================
-   MAIN
-========================================= */
-
-main {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 0 20px 50px;
+    font-weight: 600;
 
 }
 
 
-/* =========================================
-   STATUS CARD
-========================================= */
-
-.status-card {
-
-    margin-bottom: 25px;
-
-    padding: 22px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 20px;
-
-    background: white;
-
-    border-radius: 22px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.2);
-
-}
-
-
-.label {
-
-    font-size: 11px;
-
-    letter-spacing: 1px;
-
-    color: #8b95a1;
-
-}
-
-
-#status {
-
-    margin-top: 5px;
-
-    font-size: 20px;
-
-}
-
-
-#countdown {
-
-    color: var(--green-dark);
-
-    font-weight: bold;
-
-    text-align: right;
-
-}
-
-
-/* =========================================
-   LIVE CLASS
-========================================= */
-
-.live-card {
-
-    display: none;
-
-    margin-bottom: 30px;
-
-    padding: 25px;
-
-    background: white;
-
-    border-radius: 22px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.2);
-
-}
-
-
-.live-card.show {
+.clock-box small {
 
     display: block;
 
+    margin-top: 7px;
+
+    color: var(--muted);
+
 }
 
 
-.live-header {
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width:
+        min(
+            1100px,
+            calc(100% - 28px)
+        );
+
+    margin: auto;
+
+    padding-bottom: 40px;
+
+}
+
+
+/* =========================
+   PILIHAN PRODI
+========================= */
+
+.prodi-nav {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin:
+        5px 0
+        18px;
+
+}
+
+
+.prodi-btn {
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 18px;
+
+    padding: 15px;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    color: white;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+}
+
+
+.prodi-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+}
+
+
+.prodi-btn.active {
+
+    background:
+        rgba(255, 255, 255, 0.22);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================
+   LIVE CARD
+========================= */
+
+.live-card {
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 24px;
+
+    background:
+        var(--card);
+
+    backdrop-filter:
+        blur(14px);
+
+    box-shadow:
+        0 18px 50px
+        rgba(0, 0, 0, 0.18);
+
+}
+
+
+.live-top {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    gap: 10px;
 
 }
 
 
 .live-badge {
 
-    color: var(--green-dark);
+    font-size: 0.8rem;
 
-    font-size: 12px;
-
-    font-weight: bold;
+    font-weight: 900;
 
 }
 
 
-.live-dot {
+.live-badge.waiting {
 
-    display: inline-block;
-
-    width: 9px;
-
-    height: 9px;
-
-    margin-right: 6px;
-
-    border-radius: 50%;
-
-    background: var(--green);
+    color: var(--accent);
 
 }
 
 
-#liveSubject {
+.live-card h2 {
 
-    margin: 10px 0;
+    margin-top: 16px;
 
-    font-size: 25px;
+    font-size:
+        clamp(
+            1.4rem,
+            5vw,
+            2rem
+        );
 
 }
 
 
 #liveLecturer {
 
-    color: var(--gray);
+    color: var(--muted);
+
+    margin-top: 7px;
 
 }
 
 
-/* =========================================
-   PROGRESS BAR
-========================================= */
+/* =========================
+   COUNTDOWN
+========================= */
 
-.progress-container {
+.countdown-label {
 
-    height: 11px;
+    margin-top: 25px;
 
-    margin-top: 20px;
+    text-align: center;
 
-    overflow: hidden;
+    color: var(--muted);
+
+}
+
+
+.countdown {
+
+    text-align: center;
+
+    font-size:
+        clamp(
+            2.2rem,
+            10vw,
+            4rem
+        );
+
+    font-weight: 900;
+
+    margin:
+        5px 0
+        15px;
+
+    font-variant-numeric:
+        tabular-nums;
+
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-wrap {
+
+    height: 9px;
 
     border-radius: 20px;
 
-    background: #e5e7eb;
+    overflow: hidden;
+
+    background:
+        rgba(255, 255, 255, 0.12);
 
 }
 
@@ -401,388 +458,350 @@ main {
 
     height: 100%;
 
-    border-radius: 20px;
+    border-radius: inherit;
 
-    background: linear-gradient(
-        90deg,
-        var(--green),
-        #64e8c2
-    );
+    background:
+        var(--accent);
 
-    transition: width 1s linear;
+    transition:
+        width 0.4s linear;
 
 }
 
 
-.progress-info {
+.live-times {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
 
     margin-top: 8px;
 
-    color: var(--gray);
-
-    font-size: 12px;
-
 }
 
 
-/* =========================================
-   SECTION HEADING
-========================================= */
+/* =========================
+   TODAY CARD
+========================= */
 
-.section-heading {
+.today-card {
+
+    padding:
+        18px
+        20px;
+
+    margin-bottom: 14px;
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
-    align-items: end;
+    align-items: center;
 
-    margin: 30px 0 15px;
+    gap: 15px;
 
-    color: white;
-
-}
-
-
-.section-heading h2 {
-
-    margin-top: 5px;
-
-}
-
-
-.cycle-badge {
-
-    padding: 7px 13px;
-
-    border-radius: 20px;
-
-    font-size: 11px;
-
-    font-weight: bold;
-
-    background: rgba(255,255,255,0.15);
-
-}
-
-
-/* =========================================
-   WEEK CARD
-========================================= */
-
-.week {
-
-    margin-bottom: 25px;
-
-    overflow: hidden;
+    border:
+        1px solid
+        var(--border);
 
     border-radius: 24px;
 
-    background: white;
+    background:
+        var(--card);
 
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.2);
+    backdrop-filter:
+        blur(14px);
 
 }
 
 
-.week-header {
+.section-kicker {
 
-    padding: 18px 22px;
+    font-size: 0.75rem;
 
-    color: white;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: var(--accent);
+
+}
+
+
+.today-card h2 {
+
+    margin-top: 4px;
+
+}
+
+
+.today-type {
+
+    padding:
+        8px
+        12px;
+
+    border-radius: 999px;
 
     background:
-        linear-gradient(
-            135deg,
-            var(--green),
-            var(--green-dark)
-        );
+        rgba(255, 255, 255, 0.12);
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    white-space: nowrap;
 
 }
 
 
-.week-header h3 {
+/* =========================
+   DAY CARD
+========================= */
 
-    margin-bottom: 5px;
+.day-card {
 
-}
+    margin-bottom: 18px;
 
+    overflow: hidden;
 
-.week-header span {
+    border:
+        1px solid
+        var(--border);
 
-    font-size: 12px;
+    border-radius: 24px;
 
-    opacity: 0.9;
+    background:
+        var(--card);
 
-}
+    backdrop-filter:
+        blur(14px);
 
-
-/* =========================================
-   HARI
-========================================= */
-
-.day {
-
-    border-bottom: 1px solid #eee;
-
-}
-
-
-.day:last-child {
-
-    border-bottom: none;
+    box-shadow:
+        0 18px 50px
+        rgba(0, 0, 0, 0.18);
 
 }
 
 
-.day.today {
+.day-card.today {
 
-    background: #f0fff9;
-
-}
-
-
-.day-header {
-
-    padding: 15px 20px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    background: #f7faf9;
+    outline:
+        2px solid
+        rgba(142, 245, 208, 0.45);
 
 }
 
 
-.day.today .day-header {
+.day-head {
 
-    background: #e5fff5;
+    padding:
+        18px
+        20px;
 
-}
-
-
-.today-badge {
-
-    display: none;
-
-    padding: 5px 9px;
-
-    border-radius: 20px;
-
-    color: white;
-
-    background: var(--green);
-
-    font-size: 9px;
-
-    font-weight: bold;
+    border-bottom:
+        1px solid
+        var(--border);
 
 }
 
 
-.day.today .today-badge {
+.day-head h3 {
+
+    font-size: 1.15rem;
+
+}
+
+
+.day-head p {
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================
+   ONLINE / REGULER
+========================= */
+
+.online-note {
 
     display: inline-block;
 
-}
+    margin-top: 8px;
 
+    color: var(--accent);
 
-/* =========================================
-   BARIS JADWAL
-========================================= */
+    font-weight: 800;
 
-.schedule {
-
-    padding: 5px 10px;
+    font-size: 0.78rem;
 
 }
 
 
-.row {
+/* =========================
+   SCHEDULE ROW
+========================= */
+
+.schedule-row {
 
     display: grid;
 
     grid-template-columns:
-        150px
-        1fr
-        270px;
+        125px 1fr;
 
-    gap: 18px;
+    gap: 15px;
 
-    padding: 16px 10px;
+    padding:
+        17px
+        20px;
 
-    align-items: center;
-
-    border-bottom: 1px solid #eee;
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
 
     transition: 0.2s;
 
 }
 
 
-.row:last-child {
+.schedule-row:last-child {
 
-    border-bottom: none;
-
-}
-
-
-.row:hover {
-
-    background: #f5fffb;
-
-    transform: translateX(3px);
+    border-bottom: 0;
 
 }
 
 
-.row.active {
+.schedule-row.active {
 
-    border-left: 5px solid var(--green);
+    background:
+        rgba(142, 245, 208, 0.11);
 
-    border-radius: 10px;
+    box-shadow:
+        inset 4px 0
+        var(--accent);
 
-    background: #e5fff5;
+}
+
+
+.schedule-row.break {
+
+    opacity: 0.55;
 
 }
 
 
 .time {
 
-    color: var(--green-dark);
+    font-weight: 800;
 
-    font-size: 13px;
-
-    font-weight: bold;
+    color: var(--accent);
 
 }
 
 
 .subject {
 
-    font-weight: bold;
+    font-weight: 800;
+
+    line-height: 1.4;
 
 }
 
 
 .lecturer {
 
-    color: var(--gray);
+    color: var(--muted);
 
-    font-size: 13px;
+    font-size: 0.88rem;
 
-}
-
-
-/* =========================================
-   ISTIRAHAT
-========================================= */
-
-.row.break {
-
-    background: #fff9e7;
+    margin-top: 5px;
 
 }
 
 
-.row.break .time {
+.empty-day {
 
-    color: #a06f00;
-
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-
-    padding: 30px;
+    padding: 25px 20px;
 
     text-align: center;
 
-    color: white;
-
-    background: rgba(0,0,0,0.5);
+    color: var(--muted);
 
 }
 
 
-footer p {
+/* =========================
+   FOOTER
+========================= */
 
-    margin: 8px;
+footer {
+
+    text-align: center;
+
+    padding:
+        30px
+        15px
+        45px;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
 
 }
 
 
 footer a {
 
-    margin: 0 8px;
-
-    color: #5ee7c0;
+    color: white;
 
     text-decoration: none;
 
 }
 
 
-/* =========================================
+/* =========================
    MOBILE
-========================================= */
+========================= */
 
-@media (max-width: 760px) {
+@media (max-width: 600px) {
 
-    .hero-content {
+    .schedule-row {
 
-        flex-direction: column;
+        grid-template-columns:
+            1fr;
 
-        text-align: center;
-
-    }
-
-
-    .photo-container {
-
-        width: 100%;
+        gap: 7px;
 
     }
 
 
-    .class-info h1 {
+    .today-card {
 
-        font-size: 55px;
+        align-items:
+            flex-start;
 
-    }
-
-
-    .status-card {
-
-        flex-direction: column;
-
-        text-align: center;
+        flex-direction:
+            column;
 
     }
 
 
-    #countdown {
+    .class-photo {
 
-        text-align: center;
+        width: 120px;
 
-    }
-
-
-    .row {
-
-        grid-template-columns: 1fr;
-
-        gap: 6px;
+        height: 120px;
 
     }
 
