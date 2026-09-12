@@ -268,7 +268,7 @@ const jadwal = {
 
                 {
                     mulai: "14:30",
-                    selesai: "16:30",
+                    selesai: "16:00",
                     matkul: "PENDIDIKAN LUAR SEKOLAH",
                     dosen: "Saefudin, S.Pd., MM."
                 }
