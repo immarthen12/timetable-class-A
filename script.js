@@ -926,7 +926,7 @@ function renderSchedule() {
 
             rows = `
                 <div class="empty-day">
-                    💤 TIDUR DULU AJA, TIDAK ADA JADWAL.
+                    💤 Apa itu Online? Kita mah yang Offline-Offline aja.
                 </div>
             `;
 
