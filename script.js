@@ -14,12 +14,12 @@
 // RUNNING TEXT
 const jokes = [
     "🤡 IRI YA GAPUNYA SISTEM JADWAL PELAJARAN KEK KITA!.",
+    "🫂Friendly ≠ Feeling. 😭🙏🏻 Jangan cinlok sama temen sekelas, kita cuma nyaman berteman—bukan sedang jatuh cinta.",
     "🗿 Datang tepat waktu adalah investasi. Datang terlambat adalah tradisi.",
     "😭 Dosen: 'Absen menjadi patokan nilai.' — Nyatanya yang rajin aja nilainnya kecil 🗿.",
     "☕ Jangan lupa ngopi, tapi jangan lupa tugas juga.",
     "📚 Kuliah boleh santai, deadline tidak kenal kata santai.",
     "🧠 Otak boleh loading, tapi absensi jangan sampai error.",
-    "🏃 Yang penting hadir dulu, pahamnya belakangan.",
     "💀 Semester baru, tugas baru, mental lama.",
     "🗿 Jangan takut sama tugas. Takutlah kalau ditagih uang KAS.",
     "😭 Niatnya kuliah dengan tenang, kenyataannya liat dosen yang masuk langsung sebal.",
