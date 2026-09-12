@@ -13,6 +13,7 @@
 
 // RUNNING TEXT
 const jokes = [
+    "🤡 IRI YA GAPUNYA SISTEM JADWAL PELAJARAN KEK KITA!.",
     "🗿 Datang tepat waktu adalah investasi. Datang terlambat adalah tradisi.",
     "😭 Dosen: 'Absen menjadi patokan nilai.' — Nyatanya yang rajin aja nilainnya kecil 🗿.",
     "☕ Jangan lupa ngopi, tapi jangan lupa tugas juga.",
@@ -27,7 +28,6 @@ const jokes = [
     "😴 Tidur itu penting, tapi jangan sampai jadwal kuliah ikut tertidur.",
     "🚨 WARNING: Membuka jadwal kuliah dapat menyebabkan keinginan untuk libur.",
     "🫠 Kuliah: datang, ghibah, makan, mabar.",
-    "🤡 'Nanti gue kerjain' adalah awal dari segala penderitaan.",
     "📢 Jangan lupa cek jadwal sebelum berangkat. Jangan sampai datang di hari yang salah.",
     "💻 Online atau offline, tugas tetap online di pikiran.",
     "🗿 Absensi tidak mengenal alasan 'macet, Bang'.",
