@@ -1,10 +1,6 @@
-// ======================================================
+
 // JADWAL SEMESTER 7
 // PRODI PIAUD & PAI
-//
-// Jadwal berulang setiap minggu.
-// Tidak menggunakan Cycle A / B.
-//
 // PIAUD:
 // Jumat  = ONLINE
 // Sabtu  = REGULER
@@ -15,7 +11,47 @@
 // Minggu = REGULER
 // ======================================================
 
+// RUNNING TEXT
+const jokes = [
+    "🗿 Datang tepat waktu adalah investasi. Datang terlambat adalah tradisi.",
+    "😭 Dosen: 'Absen menjadi patokan nilai.' — Nyatanya yang rajin aja nilainnya kecil 🗿.",
+    "☕ Jangan lupa ngopi, tapi jangan lupa tugas juga.",
+    "📚 Kuliah boleh santai, deadline tidak kenal kata santai.",
+    "🧠 Otak boleh loading, tapi absensi jangan sampai error.",
+    "🏃 Yang penting hadir dulu, pahamnya belakangan.",
+    "💀 Semester baru, tugas baru, mental lama.",
+    "🗿 Jangan takut sama tugas. Takutlah kalau ditagih uang KAS.",
+    "😭 Niatnya kuliah dengan tenang, kenyataannya liat dosen yang masuk langsung sebal.",
+    "📖 Buku boleh tebal, semangat jangan tipis.",
+    "🔥 Semangat semester 7! Tinggal sedikit lagi... katanya.",
+    "😴 Tidur itu penting, tapi jangan sampai jadwal kuliah ikut tertidur.",
+    "🚨 WARNING: Membuka jadwal kuliah dapat menyebabkan keinginan untuk libur.",
+    "🫠 Kuliah: datang, ghibah, makan, mabar.",
+    "🤡 'Nanti gue kerjain' adalah awal dari segala penderitaan.",
+    "📢 Jangan lupa cek jadwal sebelum berangkat. Jangan sampai datang di hari yang salah.",
+    "💻 Online atau offline, tugas tetap online di pikiran.",
+    "🗿 Absensi tidak mengenal alasan 'macet, Bang'.",
+    "🔥 Yang penting jangan bolos. Urusan paham kita bahas nanti."
+];
 
+function randomRunningText() {
+    const text = document.getElementById("runningText");
+
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+
+    text.textContent = jokes[randomIndex];
+
+    // Reset animasi supaya teks baru mulai dari kanan
+    text.style.animation = "none";
+    void text.offsetWidth;
+    text.style.animation = "runningText 10s linear infinite";
+}
+
+// Tampilkan pertama kali
+randomRunningText();
+
+// Ganti jokes setiap 10 detik
+setInterval(randomRunningText, 10000);
 
 // ======================================================
 // DATA JADWAL
