@@ -24,6 +24,7 @@ const jokes = [
     "🔥 Semangat semester 7! Tinggal sedikit lagi... ceunah mah.",
     "🫠 Kuliah: datang, ghibah, makan, mabar.",
     "💻 Akan kuhadapi semua tugas kuliah, tapi ngopi dulu bang ☕.",
+    "📝 Semua pepatah kita patahin.",
     "🗿 Absensi tidak mengenal alasan 'macet, Bang'."
 ];
 
