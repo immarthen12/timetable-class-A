@@ -14,24 +14,17 @@
 // RUNNING TEXT
 const jokes = [
     "🤡 IRI YA GAPUNYA SISTEM JADWAL PELAJARAN KEK KITA!.",
-    "🫂Friendly ≠ Feeling. 😭🙏🏻 Jangan cinlok sama temen sekelas, kita cuma nyaman berteman—bukan sedang jatuh cinta.",
+    "🫂 Friendly ≠ Feeling. 😭🙏🏻 Jangan cinlok sama temen sekelas, kita cuma nyaman berteman—bukan sedang jatuh cinta.",
     "🗿 Datang tepat waktu adalah investasi. Datang terlambat adalah tradisi.",
     "😭 Dosen: 'Absen menjadi patokan nilai.' — Nyatanya yang rajin aja nilainnya kecil 🗿.",
-    "☕ Jangan lupa ngopi, tapi jangan lupa tugas juga.",
-    "📚 Kuliah boleh santai, deadline tidak kenal kata santai.",
-    "🧠 Otak boleh loading, tapi absensi jangan sampai error.",
-    "💀 Semester baru, tugas baru, mental lama.",
+    "📚 Kuliah boleh santai, bayaran dan iuran tidak kenal kata santai.",
+    "💀 Semester baru, tugas baru, kenangan lama.",
     "🗿 Jangan takut sama tugas. Takutlah kalau ditagih uang KAS.",
     "😭 Niatnya kuliah dengan tenang, kenyataannya liat dosen yang masuk langsung sebal.",
-    "📖 Buku boleh tebal, semangat jangan tipis.",
-    "🔥 Semangat semester 7! Tinggal sedikit lagi... katanya.",
-    "😴 Tidur itu penting, tapi jangan sampai jadwal kuliah ikut tertidur.",
-    "🚨 WARNING: Membuka jadwal kuliah dapat menyebabkan keinginan untuk libur.",
+    "🔥 Semangat semester 7! Tinggal sedikit lagi... ceunah mah.",
     "🫠 Kuliah: datang, ghibah, makan, mabar.",
-    "📢 Jangan lupa cek jadwal sebelum berangkat. Jangan sampai datang di hari yang salah.",
-    "💻 Online atau offline, tugas tetap online di pikiran.",
-    "🗿 Absensi tidak mengenal alasan 'macet, Bang'.",
-    "🔥 Yang penting jangan bolos. Urusan paham kita bahas nanti."
+    "💻 Akan kuhadapi semua tugas kuliah, tapi ngopi dulu bang ☕.",
+    "🗿 Absensi tidak mengenal alasan 'macet, Bang'."
 ];
 
 function randomRunningText() {
