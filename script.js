@@ -80,9 +80,16 @@ const scheduleData = {
                     subject: "Kuliah Kerja Nyata",
                     lecturer: "Beni Bunyamin, S.Pd., M.Pd."
                 },
-                {
+               {
                     start: "16:00",
-                    end: "17:00",
+                    end: "16:30",
+                    subject: "Istirahat",
+                    lecturer: "",
+                    break: true
+                },
+                {
+                    start: "16:30",
+                    end: "17:30",
                     subject: "Kapita Selekta Pendidikan",
                     lecturer: "Nasri, M.Pd."
                 }
