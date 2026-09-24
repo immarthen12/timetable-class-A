@@ -1,278 +1,200 @@
 
-// JADWAL SEMESTER 7
-// PRODI PIAUD & PAI
-// PIAUD:
-// Jumat  = ONLINE
-// Sabtu  = REGULER
-// Minggu = REGULER
-//
-// PAI:
-// Sabtu  = REGULER
-// Minggu = REGULER
-// ======================================================
+/* =========================================================
+   JADWAL SEMESTER 7A
+   =========================================================
 
-// RUNNING TEXT
-const jokes = [
-    "🤡 IRI YA GAPUNYA SISTEM JADWAL PELAJARAN KEK KITA!.",
-    "🫂 Friendly ≠ Feeling. 😭🙏🏻 Jangan cinlok sama temen sekelas, kita cuma nyaman berteman—bukan sedang jatuh cinta.",
-    "🗿 Datang tepat waktu adalah investasi. Datang terlambat adalah tradisi.",
-    "😭 Dosen: 'Absen menjadi patokan nilai.' — Nyatanya yang rajin aja nilainnya kecil 🗿.",
-    "📚 Kuliah boleh santai, bayaran dan iuran tidak kenal kata santai.",
-    "💀 Semester baru, tugas baru, kenangan lama.",
-    "🗿 Jangan takut sama tugas. Takutlah kalau ditagih uang KAS.",
-    "😭 Niatnya kuliah dengan tenang, kenyataannya liat dosen yang masuk langsung sebal.",
-    "🔥 Semangat semester 7! Tinggal sedikit lagi... ceunah mah.",
-    "🫠 Kuliah: datang, ghibah, makan, mabar.",
-    "💻 Akan kuhadapi semua tugas kuliah, tapi ngopi dulu bang ☕.",
-    "📝 Semua pepatah kita patahin.",
-    "🗿 Absensi tidak mengenal alasan 'macet, Bang'."
-];
+   19 September 2026 = PEKAN 1
 
-function randomRunningText() {
-    const text = document.getElementById("runningText");
+   19-20 September  = Pekan 1
+   26-27 September  = Pekan 2
+   03-04 Oktober    = Pekan 1
+   10-11 Oktober    = Pekan 2
+   dan seterusnya.
 
-    const randomIndex = Math.floor(Math.random() * jokes.length);
+   SEMUA DATA JADWAL ADA DI SINI.
+========================================================= */
 
-    text.textContent = jokes[randomIndex];
 
-    // Reset animasi supaya teks baru mulai dari kanan
-    text.style.animation = "none";
-    void text.offsetWidth;
-    text.style.animation = "runningText 10s linear infinite";
-}
+/* =========================================================
+   DATA JADWAL
+========================================================= */
 
-// Tampilkan pertama kali
-randomRunningText();
+const scheduleData = {
 
-// Ganti jokes setiap 10 detik
-setInterval(randomRunningText, 10000);
+    PAI: {
 
-// ======================================================
-// DATA JADWAL
-// ======================================================
+        1: {
 
-const jadwal = {
-
-    // ==================================================
-    // PIAUD
-    // ==================================================
-
-    piaud: {
-
-        nama: "PIAUD",
-
-        hari: {
-
-            // --------------------------
-            // JUMAT
-            // KELAS ONLINE
-            // --------------------------
-
-            jumat: [
-
+            Saturday: [
                 {
-                    mulai: "14:00",
-                    selesai: "15:30",
-                    matkul: "KEWIRAUSAHAAN",
-                    dosen: "Aries Setiawan, SE., MM."
+                    start: "14:00",
+                    end: "15:00",
+                    subject: "Kewirausahaan",
+                    lecturer: "Aries Setiawan, SE., MM."
                 },
-
                 {
-                    mulai: "15:30",
-                    selesai: "16:00",
-                    istirahat: true
-                },
-
-                {
-                    mulai: "16:00",
-                    selesai: "17:30",
-                    matkul: "MANAJEMEN PENGELOLAAN KELAS",
-                    dosen: "Ahmad Azizi, S.Pd., M.Si."
-                },
-
-                {
-                    mulai: "19:00",
-                    selesai: "20:30",
-                    matkul: "PEMBELAJARAN BAHASA DAERAH ANAK USIA DINI",
-                    dosen: "Eni Nuraeni, S.Pd"
+                    start: "15:00",
+                    end: "16:00",
+                    subject: "Pendidikan Luar Sekolah",
+                    lecturer: "Saefudin, S.Pd., MM."
                 }
-
             ],
 
-
-            // --------------------------
-            // SABTU
-            // KELAS REGULER
-            // --------------------------
-
-            sabtu: [
-
+            Sunday: [
                 {
-                    mulai: "13:30",
-                    selesai: "15:00",
-                    matkul: "PEMBELAJARAN LITERASI, NURNERASI ANAK USIA DINI",
-                    dosen: "Nuni Wahyuningsih, M.Pd."
+                    start: "11:00",
+                    end: "12:00",
+                    subject: "Pendidikan Keterampilan Hidup",
+                    lecturer: "Dr. Hasan Basri"
                 },
-
                 {
-                    mulai: "15:00",
-                    selesai: "16:30",
-                    matkul: "PEMBELAJARAN SAINS ANAK USIA DINI",
-                    dosen: "Yandra, S.Pd.I., M.Pd.,/Ahdan Abdul Ghani, S.Pd."
+                    start: "12:00",
+                    end: "13:00",
+                    subject: "Istirahat",
+                    lecturer: "",
+                    break: true
                 },
-
                 {
-                    mulai: "16:30",
-                    selesai: "17:00",
-                    istirahat: true
-                },
-
-                {
-                    mulai: "17:00",
-                    selesai: "18:30",
-                    matkul: "PENDIDIKAN KELUARGA",
-                    dosen: "Dede Iwanah, S.Pd., M.Pd.,/Nurhasanah, S.Pd."
+                    start: "13:00",
+                    end: "14:00",
+                    subject: "Metodologi Penelitian Pendidikan",
+                    lecturer: "Dr. Budiman"
                 }
-
-            ],
-
-
-            // --------------------------
-            // MINGGU
-            // KELAS REGULER
-            // --------------------------
-
-            minggu: [
-
-                {
-                    mulai: "09:00",
-                    selesai: "10:30",
-                    matkul: "PEMBELAJARAN KESENIAN ANAK USIA DINI",
-                    dosen: "Siti Mutmainah, M.Pd."
-                },
-
-                {
-                    mulai: "10:30",
-                    selesai: "12:00",
-                    matkul: "METODOLOGI PENELITIAN PENDIDIKAN ANAK USIA DINI",
-                    dosen: "Dr. Budiman"
-                },
-
-                {
-                    mulai: "12:00",
-                    selesai: "13:00",
-                    istirahat: true
-                },
-
-                {
-                    mulai: "13:00",
-                    selesai: "14:30",
-                    matkul: "BERMAIN DAN PERMAINAN ANAK USIA DINI",
-                    dosen: "Tety Srihayati, S.Pd., M.Pd."
-                },
-
-                {
-                    mulai: "14:30",
-                    selesai: "16:30",
-                    matkul: "KULIAH KERJA NYATA",
-                    dosen: "Dr. Hasan Basri"
-                }
-
             ]
+
+        },
+
+
+        2: {
+
+            Saturday: [
+                {
+                    start: "14:00",
+                    end: "15:00",
+                    subject: "Sistem Penjaminan Mutu",
+                    lecturer: "Moch. Sahidin, MA."
+                },
+                {
+                    start: "15:00",
+                    end: "16:00",
+                    subject: "Kuliah Kerja Nyata",
+                    lecturer: "Beni Bunyamin, S.Pd., M.Pd."
+                },
+                {
+                    start: "16:00",
+                    end: "17:00",
+                    subject: "Kapita Selekta Pendidikan",
+                    lecturer: "Nasri, M.Pd."
+                }
+            ],
+
+            Sunday: []
 
         }
 
     },
 
 
-    // ==================================================
-    // PAI
-    // ==================================================
+    PIAUD: {
 
-    pai: {
+        1: {
 
-        nama: "PAI",
-
-        hari: {
-
-            // --------------------------
-            // SABTU
-            // KELAS REGULER
-            // --------------------------
-
-            sabtu: [
-
+            Saturday: [
                 {
-                    mulai: "13:30",
-                    selesai: "15:00",
-                    matkul: "KEWIRAUSAHAAN",
-                    dosen: "Aries Setiawan, SE., MM."
+                    start: "14:00",
+                    end: "15:00",
+                    subject: "Pembelajaran Anak Usia Dini",
+                    lecturer: "Dede Iwanah, S.Pd., M.Pd. / Nurhasanah, S.Pd."
                 },
-
                 {
-                    mulai: "15:00",
-                    selesai: "16:30",
-                    matkul: "SISTEM PENJAMINAN MUTU",
-                    dosen: "Moch Sahidin, MA."
+                    start: "15:00",
+                    end: "16:00",
+                    subject: "Manajemen Pengelolaan Kelas",
+                    lecturer: "Ahmad Azizi, S.Pd., M.Si."
                 },
-
                 {
-                    mulai: "16:30",
-                    selesai: "17:00",
-                    istirahat: true
+                    start: "16:00",
+                    end: "16:30",
+                    subject: "Istirahat",
+                    lecturer: "",
+                    break: true
                 },
-
                 {
-                    mulai: "17:00",
-                    selesai: "18:30",
-                    matkul: "KULIAH KERJA NYATA",
-                    dosen: "Beni Bunyamin, S.Pd., M.Pd."
+                    start: "16:30",
+                    end: "17:30",
+                    subject: "Pembelajaran Al-Qur'an Anak Usia Dini",
+                    lecturer: "Siti Mutmainah, M.Pd."
                 }
-
             ],
 
-
-            // --------------------------
-            // MINGGU
-            // KELAS REGULER
-            // --------------------------
-
-            minggu: [
-
+            Sunday: [
                 {
-                    mulai: "09:00",
-                    selesai: "10:30",
-                    matkul: "METODOLOGI PENELITIAN PENDIDIKAN",
-                    dosen: "Dr. Budiman"
+                    start: "10:00",
+                    end: "11:00",
+                    subject: "Metodologi Penelitian Pendidikan Anak Usia Dini",
+                    lecturer: "Dr. Budiman"
                 },
-
                 {
-                    mulai: "10:30",
-                    selesai: "12:00",
-                    matkul: "KAPITA SELEKTA PENDIDIKAN",
-                    dosen: "Nasri, M.Pd"
+                    start: "11:00",
+                    end: "12:00",
+                    subject: "Pembelajaran Bahasa Daerah Anak Usia Dini",
+                    lecturer: "Eni Nuraeni, S.Pd."
                 },
-
                 {
-                    mulai: "12:00",
-                    selesai: "13:00",
-                    istirahat: true
+                    start: "12:00",
+                    end: "13:00",
+                    subject: "Istirahat",
+                    lecturer: "",
+                    break: true
                 },
-
                 {
-                    mulai: "13:00",
-                    selesai: "14:30",
-                    matkul: "PENDIDIKAN KETERAMPILAN HIDUP (LIFESKILL)",
-                    dosen: "Dr. Hasan Basri"
-                },
-
-                {
-                    mulai: "14:30",
-                    selesai: "16:00",
-                    matkul: "PENDIDIKAN LUAR SEKOLAH",
-                    dosen: "Saefudin, S.Pd., MM."
+                    start: "13:00",
+                    end: "14:00",
+                    subject: "Bermain dan Permainan Anak Usia Dini",
+                    lecturer: "Teti Srihayati, S.Pd., M.Pd."
                 }
+            ]
 
+        },
+
+
+        2: {
+
+            Saturday: [
+                {
+                    start: "15:00",
+                    end: "16:00",
+                    subject: "Kewirausahaan",
+                    lecturer: "Aries Setiawan, SE., MM."
+                },
+                {
+                    start: "16:00",
+                    end: "16:30",
+                    subject: "Istirahat",
+                    lecturer: "",
+                    break: true
+                },
+                {
+                    start: "16:30",
+                    end: "17:30",
+                    subject: "Pembelajaran Literasi, Numerasi Anak Usia Dini",
+                    lecturer: "Nuni Wahyuningsih, M.Pd."
+                }
+            ],
+
+            Sunday: [
+                {
+                    start: "10:00",
+                    end: "11:00",
+                    subject: "Pembelajaran Sains Anak Usia Dini",
+                    lecturer: "Yandra, S.Pd.I., M.Pd. / Ahdan Abdul Ghani, S.Pd."
+                },
+                {
+                    start: "11:00",
+                    end: "12:00",
+                    subject: "Kuliah Kerja Nyata",
+                    lecturer: "Dr. Hasan Basri"
+                }
             ]
 
         }
@@ -282,193 +204,988 @@ const jadwal = {
 };
 
 
+/* =========================================================
+   KONFIGURASI
+========================================================= */
 
-// ======================================================
-// PRODI AKTIF
-// ======================================================
+const startDate = new Date(
+    2026,
+    8,
+    12,
+    0,
+    0,
+    0
+);
 
-let prodiAktif = "piaud";
-
-
-
-// ======================================================
-// NAMA HARI
-// ======================================================
-
-const namaHari = {
-
-    0: "Minggu",
-    1: "Senin",
-    2: "Selasa",
-    3: "Rabu",
-    4: "Kamis",
-    5: "Jumat",
-    6: "Sabtu"
-
-};
+let currentProgram = "PAI";
 
 
-const keyHari = {
+/* =========================================================
+   RUNNING TEXT
+========================================================= */
 
-    0: "minggu",
-    5: "jumat",
-    6: "sabtu"
+const runningTexts = [
 
-};
+    "🤡 IRI YA GAPUNYA SISTEM JADWAL PELAJARAN KEK KITA!.",
 
+    "🫂 Friendly ≠ Feeling. 😭🙏🏻 Jangan cinlok sama temen sekelas, kita cuma nyaman berteman—bukan sedang jatuh cinta.",
 
+    "🗿 Datang tepat waktu adalah investasi. Datang terlambat adalah tradisi.",
 
-// ======================================================
-// MENDAPATKAN WAKTU WIB
-// ======================================================
+    "😭 Dosen: 'Absen menjadi patokan nilai.' — Nyatanya yang rajin aja nilainnya kecil 🗿.",
 
-function getNowWIB() {
+    "📚 Kuliah boleh santai, bayaran dan iuran tidak kenal kata santai.",
 
-    const parts =
-        new Intl.DateTimeFormat(
-            "en-GB",
-            {
-                timeZone: "Asia/Jakarta",
+    "💀 Semester baru, tugas baru, kenangan lama.",
 
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit",
+    "🗿 Jangan takut sama tugas. Takutlah kalau ditagih uang KAS.",
 
-                hour12: false
+    "😭 Niatnya kuliah dengan tenang, kenyataannya liat dosen yang masuk langsung sebal.",
+
+    "🔥 Semangat semester 7! Tinggal sedikit lagi... ceunah mah.",
+
+    "🫠 Kuliah: datang, ghibah, makan, mabar.",
+
+    "💻 Akan kuhadapi semua tugas kuliah, tapi ngopi dulu bang ☕.",
+
+    "📝 Semua pepatah kita patahin.",
+
+    "🗿 Absensi tidak mengenal alasan 'macet, Bang'."
+
+];
+
+let runningIndex = 0;
+
+const runningElement =
+    document.getElementById("runningText");
+
+function startRunningText() {
+
+    if (!runningElement) return;
+
+    runningElement.textContent =
+        runningTexts[runningIndex];
+
+}
+
+if (runningElement) {
+
+    runningElement.addEventListener(
+        "animationiteration",
+        () => {
+
+            runningIndex++;
+
+            if (
+                runningIndex >=
+                runningTexts.length
+            ) {
+                runningIndex = 0;
             }
-        ).formatToParts(new Date());
+
+            runningElement.textContent =
+                runningTexts[runningIndex];
+
+        }
+    );
+
+    startRunningText();
+}
 
 
-    const getPart = (type) => {
+/* =========================================================
+   HELPER
+========================================================= */
 
-        return parts.find(
-            part => part.type === type
-        )?.value;
+function timeToMinutes(time) {
 
-    };
+    const [hours, minutes] =
+        time.split(":").map(Number);
+
+    return hours * 60 + minutes;
+
+}
+
+
+function getDayName(dayNumber) {
+
+    if (dayNumber === 6) {
+        return "Saturday";
+    }
+
+    if (dayNumber === 0) {
+        return "Sunday";
+    }
+
+    return null;
+
+}
+
+
+function formatTwoDigits(number) {
+
+    return String(number).padStart(2, "0");
+
+}
+
+
+/* =========================================================
+   MENENTUKAN PEKAN
+========================================================= */
+
+function getCurrentWeek(date = new Date()) {
+
+    const difference =
+        date.getTime() -
+        startDate.getTime();
+
+    /*
+       Sebelum 19 September 2026
+       tetap dianggap Pekan 1.
+    */
+
+    if (difference < 0) {
+        return 1;
+    }
+
+    const days =
+        Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
+
+    return (
+        Math.floor(days / 7) % 2
+    ) + 1;
+
+}
+
+
+/* =========================================================
+   UPDATE TANGGAL & JAM
+========================================================= */
+
+function updateDateTime() {
+
+    const now = new Date();
+
+    const dateElement =
+        document.getElementById(
+            "currentDate"
+        );
+
+    const timeElement =
+        document.getElementById(
+            "currentTime"
+        );
+
+
+    if (dateElement) {
+
+        dateElement.textContent =
+            now.toLocaleDateString(
+                "id-ID",
+                {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                }
+            );
+
+    }
+
+
+    if (timeElement) {
+
+        timeElement.textContent =
+            now.toLocaleTimeString(
+                "id-ID",
+                {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit"
+                }
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   BUAT OBJEK WAKTU HARI INI
+========================================================= */
+
+function createDateTime(
+    baseDate,
+    time
+) {
+
+    const [hours, minutes] =
+        time.split(":").map(Number);
+
+    const result =
+        new Date(baseDate);
+
+    result.setHours(
+        hours,
+        minutes,
+        0,
+        0
+    );
+
+    return result;
+
+}
+
+
+/* =========================================================
+   CARI KELAS YANG SEDANG BERLANGSUNG
+========================================================= */
+
+function findOngoingClass() {
+
+    const now = new Date();
+
+    const dayName =
+        getDayName(
+            now.getDay()
+        );
+
+    /*
+       Senin-Jumat tidak ada kuliah.
+    */
+
+    if (!dayName) {
+        return null;
+    }
+
+
+    const week =
+        getCurrentWeek(now);
+
+    const daySchedule =
+        scheduleData[currentProgram]
+        [week]
+        [dayName] || [];
+
+
+    for (const item of daySchedule) {
+
+        if (item.break) {
+            continue;
+        }
+
+
+        const start =
+            createDateTime(
+                now,
+                item.start
+            );
+
+        const end =
+            createDateTime(
+                now,
+                item.end
+            );
+
+
+        if (
+            now >= start &&
+            now < end
+        ) {
+
+            return {
+                item,
+                start,
+                end,
+                day: dayName,
+                week
+            };
+
+        }
+
+    }
+
+
+    return null;
+
+}
+
+
+/* =========================================================
+   CARI KELAS BERIKUTNYA
+========================================================= */
+
+function findNextClass() {
+
+    const now = new Date();
+
+    /*
+       Kita cek maksimal 14 hari ke depan.
+       Ini aman karena siklus jadwal adalah 2 minggu.
+    */
+
+    for (
+        let offset = 0;
+        offset <= 14;
+        offset++
+    ) {
+
+        const checkDate =
+            new Date(now);
+
+        checkDate.setDate(
+            now.getDate() + offset
+        );
+
+        checkDate.setHours(
+            0,
+            0,
+            0,
+            0
+        );
+
+
+        const dayName =
+            getDayName(
+                checkDate.getDay()
+            );
+
+
+        /*
+           Lewati Senin-Jumat.
+        */
+
+        if (!dayName) {
+            continue;
+        }
+
+
+        const week =
+            getCurrentWeek(
+                checkDate
+            );
+
+
+        const daySchedule =
+            scheduleData[currentProgram]
+            [week]
+            [dayName] || [];
+
+
+        for (const item of daySchedule) {
+
+            /*
+               Istirahat bukan mata kuliah.
+            */
+
+            if (item.break) {
+                continue;
+            }
+
+
+            const classStart =
+                createDateTime(
+                    checkDate,
+                    item.start
+                );
+
+
+            /*
+               Kalau kelas hari ini sudah mulai,
+               jangan dianggap "berikutnya".
+            */
+
+            if (
+                classStart <= now
+            ) {
+                continue;
+            }
+
+
+            const classEnd =
+                createDateTime(
+                    checkDate,
+                    item.end
+                );
+
+
+            return {
+                item,
+                start: classStart,
+                end: classEnd,
+                day: dayName,
+                week
+            };
+
+        }
+
+    }
+
+
+    return null;
+
+}
+
+
+/* =========================================================
+   CARI SEMUA INFORMASI KELAS SEKARANG
+========================================================= */
+
+function getCurrentScheduleState() {
+
+    const ongoing =
+        findOngoingClass();
+
+    const next =
+        findNextClass();
 
 
     return {
-
-        hour: Number(getPart("hour")),
-
-        minute: Number(getPart("minute")),
-
-        second: Number(getPart("second"))
-
+        ongoing,
+        next
     };
 
 }
 
 
+/* =========================================================
+   STATUS JADWAL
+========================================================= */
 
-// ======================================================
-// MENDAPATKAN HARI SEKARANG
-// ======================================================
+function getItemStatus(
+    item,
+    date,
+    isToday
+) {
 
-function getTodayIndex() {
+    if (item.break) {
 
-    const parts =
-        new Intl.DateTimeFormat(
-            "en-US",
-            {
-                timeZone: "Asia/Jakarta",
+        return "break";
 
-                year: "numeric",
-                month: "2-digit",
-                day: "2-digit"
+    }
+
+
+    if (!isToday) {
+
+        return "";
+
+    }
+
+
+    const now =
+        new Date();
+
+
+    const start =
+        createDateTime(
+            date,
+            item.start
+        );
+
+
+    const end =
+        createDateTime(
+            date,
+            item.end
+        );
+
+
+    if (
+        now >= start &&
+        now < end
+    ) {
+
+        return "ongoing";
+
+    }
+
+
+    if (now >= end) {
+
+        return "finished";
+
+    }
+
+
+    if (now < start) {
+
+        return "next";
+
+    }
+
+
+    return "";
+
+}
+
+
+/* =========================================================
+   RENDER JADWAL HARI
+========================================================= */
+
+function renderDay(
+    elementId,
+    schedule,
+    dayNumber
+) {
+
+    const container =
+        document.getElementById(
+            elementId
+        );
+
+
+    if (!container) {
+        return;
+    }
+
+
+    container.innerHTML = "";
+
+
+    if (
+        !schedule ||
+        schedule.length === 0
+    ) {
+
+        container.innerHTML = `
+            <div class="off-day">
+                <i class="bi bi-calendar-x"></i>
+                Tidak ada jadwal pada hari ini.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    const now =
+        new Date();
+
+
+    const isToday =
+        now.getDay() === dayNumber;
+
+
+    /*
+       Gunakan tanggal hari yang sedang
+       ditampilkan.
+    */
+
+    const displayDate =
+        new Date(now);
+
+
+    /*
+       Kalau hari yang ditampilkan berbeda
+       dari hari sekarang, cari tanggal
+       terdekat dalam minggu berjalan.
+    */
+
+    const difference =
+        dayNumber -
+        now.getDay();
+
+
+    displayDate.setDate(
+        now.getDate() + difference
+    );
+
+
+    schedule.forEach(item => {
+
+        const status =
+            getItemStatus(
+                item,
+                displayDate,
+                isToday
+            );
+
+
+        let statusText = "";
+
+
+        if (status === "ongoing") {
+
+            statusText =
+                "Sedang berlangsung";
+
+        }
+        else if (status === "next") {
+
+            statusText =
+                "Selanjutnya";
+
+        }
+        else if (status === "finished") {
+
+            statusText =
+                "Selesai";
+
+        }
+        else if (status === "break") {
+
+            statusText =
+                "Istirahat";
+
+        }
+
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+
+        card.className =
+            `schedule-card ${status}`;
+
+
+        card.innerHTML = `
+
+            <div class="schedule-time">
+                ${item.start} – ${item.end}
+            </div>
+
+            <div class="schedule-info">
+
+                <h4>
+                    ${item.subject}
+                </h4>
+
+                ${
+                    item.lecturer
+                        ? `<p>${item.lecturer}</p>`
+                        : ""
+                }
+
+            </div>
+
+            ${
+                statusText
+                    ? `
+                        <span class="schedule-status">
+                            ${statusText}
+                        </span>
+                    `
+                    : ""
             }
-        ).formatToParts(new Date());
+
+        `;
 
 
-    const year =
-        Number(
-            parts.find(
-                p => p.type === "year"
-            ).value
-        );
+        container.appendChild(card);
 
-
-    const month =
-        Number(
-            parts.find(
-                p => p.type === "month"
-            ).value
-        );
-
-
-    const day =
-        Number(
-            parts.find(
-                p => p.type === "day"
-            ).value
-        );
-
-
-    const date =
-        new Date(
-            Date.UTC(
-                year,
-                month - 1,
-                day
-            )
-        );
-
-
-    return date.getUTCDay();
+    });
 
 }
 
 
+/* =========================================================
+   RENDER SELURUH JADWAL
+========================================================= */
 
-// ======================================================
-// KONVERSI JAM KE DETIK
-// ======================================================
+function renderSchedule() {
 
-function timeToSeconds(time) {
-
-    const [hour, minute] =
-        time.split(":").map(Number);
+    const now =
+        new Date();
 
 
-    return (
-        hour * 3600 +
-        minute * 60
+    const week =
+        getCurrentWeek(now);
+
+
+    const weekElement =
+        document.getElementById(
+            "weekNumber"
+        );
+
+
+    const scheduleWeekElement =
+        document.getElementById(
+            "scheduleWeek"
+        );
+
+
+    const programTitleElement =
+        document.getElementById(
+            "programTitle"
+        );
+
+
+    if (weekElement) {
+        weekElement.textContent =
+            week;
+    }
+
+
+    if (scheduleWeekElement) {
+        scheduleWeekElement.textContent =
+            week;
+    }
+
+
+    if (programTitleElement) {
+        programTitleElement.textContent =
+            currentProgram;
+    }
+
+
+    const programData =
+        scheduleData[
+            currentProgram
+        ][week];
+
+
+    renderDay(
+        "saturdaySchedule",
+        programData.Saturday,
+        6
+    );
+
+
+    renderDay(
+        "sundaySchedule",
+        programData.Sunday,
+        0
+    );
+
+
+    updateCurrentAndNext();
+
+}
+
+
+/* =========================================================
+   UPDATE MATKUL SEKARANG + BERIKUTNYA
+========================================================= */
+
+function updateCurrentAndNext() {
+
+    const state =
+        getCurrentScheduleState();
+
+
+    const ongoing =
+        state.ongoing;
+
+    const next =
+        state.next;
+
+
+    /*
+       =========================================
+       JIKA ADA KELAS YANG SEDANG BERLANGSUNG
+       =========================================
+    */
+
+    if (ongoing) {
+
+        updateOngoingDisplay(
+            ongoing
+        );
+
+    }
+
+    else {
+
+        updateNoOngoingDisplay();
+
+    }
+
+
+    /*
+       =========================================
+       KELAS BERIKUTNYA
+       =========================================
+    */
+
+    if (next) {
+
+        updateNextDisplay(
+            next
+        );
+
+    }
+
+    else {
+
+        const nextName =
+            document.getElementById(
+                "nextClassName"
+            );
+
+        const nextDetail =
+            document.getElementById(
+                "nextClassDetail"
+            );
+
+        const nextLecturer =
+            document.getElementById(
+                "nextClassLecturer"
+            );
+
+        const nextTime =
+            document.getElementById(
+                "nextClassTime"
+            );
+
+
+        if (nextName) {
+            nextName.textContent =
+                "Tidak ada jadwal";
+        }
+
+        if (nextDetail) {
+            nextDetail.textContent =
+                "Tidak ada jadwal berikutnya";
+        }
+
+        if (nextLecturer) {
+            nextLecturer.textContent =
+                "-";
+        }
+
+        if (nextTime) {
+            nextTime.textContent =
+                "--";
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   TAMPILKAN KELAS YANG SEDANG BERLANGSUNG
+========================================================= */
+
+function updateOngoingDisplay(
+    ongoing
+) {
+
+    const countdownLabel =
+        document.getElementById(
+            "countdownLabel"
+        );
+
+    const nextClassName =
+        document.getElementById(
+            "nextClassName"
+        );
+
+    if (countdownLabel) {
+
+        countdownLabel.textContent =
+            "Sedang berlangsung";
+
+    }
+
+
+    if (nextClassName) {
+
+        nextClassName.textContent =
+            ongoing.item.subject;
+
+    }
+
+
+    /*
+       Countdown sekarang menghitung
+       SISA WAKTU kelas yang sedang berjalan.
+    */
+
+    updateOngoingCountdown(
+        ongoing
     );
 
 }
 
 
+/* =========================================================
+   KALAU TIDAK ADA KELAS YANG BERLANGSUNG
+========================================================= */
 
-// ======================================================
-// DETIK SEKARANG
-// ======================================================
+function updateNoOngoingDisplay() {
 
-function getCurrentSeconds() {
+    const countdownLabel =
+        document.getElementById(
+            "countdownLabel"
+        );
 
-    const now = getNowWIB();
+    const nextClassName =
+        document.getElementById(
+            "nextClassName"
+        );
 
 
-    return (
-        now.hour * 3600 +
-        now.minute * 60 +
-        now.second
-    );
+    if (countdownLabel) {
+
+        countdownLabel.textContent =
+            "Menuju kelas berikutnya";
+
+    }
+
+
+    if (nextClassName) {
+
+        const next =
+            findNextClass();
+
+        nextClassName.textContent =
+            next
+                ? next.item.subject
+                : "Tidak ada jadwal";
+
+    }
+
+
+    updateNextCountdown();
 
 }
 
 
+/* =========================================================
+   COUNTDOWN KELAS YANG SEDANG BERLANGSUNG
+========================================================= */
 
-// ======================================================
-// FORMAT COUNTDOWN
-// ======================================================
+function updateOngoingCountdown(
+    ongoing
+) {
 
-function formatCountdown(totalSeconds) {
+    const now =
+        new Date();
 
-    totalSeconds =
-        Math.max(
-            0,
-            Math.floor(totalSeconds)
+
+    const difference =
+        ongoing.end.getTime() -
+        now.getTime();
+
+
+    if (difference <= 0) {
+
+        const countdown =
+            document.getElementById(
+                "countdown"
+            );
+
+        if (countdown) {
+            countdown.textContent =
+                "Kelas selesai";
+        }
+
+        return;
+
+    }
+
+
+    const totalSeconds =
+        Math.floor(
+            difference / 1000
         );
 
 
@@ -488,649 +1205,30 @@ function formatCountdown(totalSeconds) {
         totalSeconds % 60;
 
 
-    return [
-
-        String(hours).padStart(2, "0"),
-
-        String(minutes).padStart(2, "0"),
-
-        String(seconds).padStart(2, "0")
-
-    ].join(":");
-
-}
-
-
-
-// ======================================================
-// MENDAPATKAN JADWAL HARI INI
-// ======================================================
-
-function getScheduleToday() {
-
-    const today =
-        getTodayIndex();
-
-
-    const key =
-        keyHari[today];
-
-
-    if (!key) {
-
-        return [];
-
-    }
-
-
-    return (
-        jadwal[prodiAktif]
-            .hari[key] || []
-    );
-
-}
-
-
-
-// ======================================================
-// MENCARI KELAS YANG SEDANG BERLANGSUNG
-// ======================================================
-
-function getActiveClass() {
-
-    const schedule =
-        getScheduleToday();
-
-
-    const now =
-        getCurrentSeconds();
-
-
-    return schedule.find(
-        item => {
-
-            if (item.istirahat) {
-
-                return false;
-
-            }
-
-
-            const start =
-                timeToSeconds(
-                    item.mulai
-                );
-
-
-            const end =
-                timeToSeconds(
-                    item.selesai
-                );
-
-
-            return (
-                now >= start &&
-                now < end
-            );
-
-        }
-    );
-
-}
-
-
-
-// ======================================================
-// MENCARI KELAS BERIKUTNYA HARI INI
-// ======================================================
-
-function getNextClassToday() {
-
-    const schedule =
-        getScheduleToday();
-
-
-    const now =
-        getCurrentSeconds();
-
-
-    return schedule.find(
-        item => {
-
-            if (item.istirahat) {
-
-                return false;
-
-            }
-
-
-            return (
-                now <
-                timeToSeconds(
-                    item.mulai
-                )
-            );
-
-        }
-    );
-
-}
-
-
-
-// ======================================================
-// MENCARI KELAS BERIKUTNYA
-// TERMASUK HARI BERIKUTNYA
-// ======================================================
-
-function getNextScheduledClass() {
-
-    const today =
-        getTodayIndex();
-
-
-    const now =
-        getCurrentSeconds();
-
-
-    /*
-        Kita cari maksimal 7 hari
-        ke depan.
-    */
-
-    for (
-        let offset = 0;
-        offset <= 7;
-        offset++
-    ) {
-
-        const targetDay =
-            (today + offset) % 7;
-
-
-        const key =
-            keyHari[targetDay];
-
-
-        /*
-            Senin-Kamis tidak punya
-            jadwal, jadi dilewati.
-        */
-
-        if (!key) {
-
-            continue;
-
-        }
-
-
-        const schedule =
-            jadwal[prodiAktif]
-                .hari[key] || [];
-
-
-        for (const item of schedule) {
-
-            if (item.istirahat) {
-
-                continue;
-
-            }
-
-
-            const start =
-                timeToSeconds(
-                    item.mulai
-                );
-
-
-            /*
-                Kalau masih hari yang sama,
-                kelas yang sudah lewat dilewati.
-            */
-
-            if (
-                offset === 0 &&
-                start <= now
-            ) {
-
-                continue;
-
-            }
-
-
-            return {
-
-                item: item,
-
-                offset: offset
-
-            };
-
-        }
-
-    }
-
-
-    return null;
-
-}
-
-
-
-// ======================================================
-// UPDATE JAM
-// ======================================================
-
-function updateClock() {
-
-    const now =
-        new Date();
-
-
-    document.getElementById(
-        "clock"
-    ).textContent =
-
-        new Intl.DateTimeFormat(
-            "id-ID",
-            {
-                timeZone: "Asia/Jakarta",
-
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit",
-
-                hour12: false
-            }
-        ).format(now);
-
-
-    document.getElementById(
-        "date"
-    ).textContent =
-
-        new Intl.DateTimeFormat(
-            "id-ID",
-            {
-                timeZone: "Asia/Jakarta",
-
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-                year: "numeric"
-            }
-        ).format(now);
-
-}
-
-
-
-// ======================================================
-// RENDER JADWAL
-// ======================================================
-
-function renderSchedule() {
-
-    const container =
+    const countdown =
         document.getElementById(
-            "scheduleContainer"
+            "countdown"
         );
 
 
-    const data =
-        jadwal[prodiAktif];
+    if (countdown) {
 
-
-    /*
-        Judul prodi
-    */
-
-    document.getElementById(
-        "todayTitle"
-    ).textContent =
-        data.nama;
-
-
-    /*
-        Hari sekarang
-    */
-
-    const todayIndex =
-        getTodayIndex();
-
-
-    const todayKey =
-        keyHari[todayIndex];
-
-
-    /*
-        Status kelas hari ini
-    */
-
-    const todayType =
-        document.getElementById(
-            "todayType"
-        );
-
-
-    if (
-        prodiAktif === "piaud" &&
-        todayKey === "jumat"
-    ) {
-
-        todayType.textContent =
-            "🟣 KELAS ONLINE";
+        countdown.textContent =
+            `${formatTwoDigits(hours)}:${formatTwoDigits(minutes)}:${formatTwoDigits(seconds)}`;
 
     }
-
-    else if (
-        todayKey === "sabtu" ||
-        todayKey === "minggu"
-    ) {
-
-        todayType.textContent =
-            "🟢 KELAS OFFLINE";
-
-    }
-
-    else {
-
-        todayType.textContent =
-            "Tidak Ada Kelas";
-
-    }
-
-
-    /*
-        Kosongkan jadwal lama
-    */
-
-    container.innerHTML = "";
-
-
-    /*
-        Kita tampilkan:
-
-        Jumat
-        Sabtu
-        Minggu
-    */
-
-    [
-        "jumat",
-        "sabtu",
-        "minggu"
-    ].forEach(day => {
-
-        const schedule =
-            data.hari[day] || [];
-
-
-        const card =
-            document.createElement(
-                "section"
-            );
-
-
-        card.className =
-            "day-card";
-
-
-        /*
-            Apakah hari ini?
-        */
-
-        if (
-            day === todayKey
-        ) {
-
-            card.classList.add(
-                "today"
-            );
-
-        }
-
-
-        /*
-            Label online/reguler
-        */
-
-        let note = "";
-
-
-        if (
-            prodiAktif === "piaud" &&
-            day === "jumat"
-        ) {
-
-            note =
-                `<span class="online-note">
-                    🟣 Kelas Online
-                </span>`;
-
-        }
-
-        else if (
-            schedule.length > 0
-        ) {
-
-            note =
-                `<span class="online-note">
-                    🟢 Kelas Offline
-                </span>`;
-
-        }
-
-
-        /*
-            Nama hari
-        */
-
-        const dayIndex =
-            [
-                "minggu",
-                "senin",
-                "selasa",
-                "rabu",
-                "kamis",
-                "jumat",
-                "sabtu"
-            ].indexOf(day);
-
-
-        const displayDay =
-            namaHari[dayIndex];
-
-
-        /*
-            Buat baris jadwal
-        */
-
-        let rows = "";
-
-
-        if (
-            schedule.length === 0
-        ) {
-
-            rows = `
-                <div class="empty-day">
-                    💤 Apa itu Online? Kita mah yang Offline-Offline aja.
-                </div>
-            `;
-
-        }
-
-        else {
-
-            rows =
-                schedule.map(
-                    item => {
-
-                        /*
-                            Kalau istirahat
-                        */
-
-                        if (
-                            item.istirahat
-                        ) {
-
-                            return `
-
-                                <div class="schedule-row break">
-
-                                    <div class="time">
-                                        ${item.mulai}
-                                        -
-                                        ${item.selesai}
-                                    </div>
-
-                                    <div>
-
-                                        <div class="subject">
-                                            ☕ ISTIRAHAT
-                                        </div>
-
-                                        <div class="lecturer">
-                                            Waktu istirahat
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            `;
-
-                        }
-
-
-                        /*
-                            Kalau mata kuliah
-                        */
-
-                        return `
-
-                            <div
-                                class="schedule-row"
-                                data-day="${day}"
-                                data-start="${item.mulai}"
-                                data-end="${item.selesai}"
-                            >
-
-                                <div class="time">
-
-                                    ${item.mulai}
-                                    -
-                                    ${item.selesai}
-
-                                </div>
-
-
-                                <div>
-
-                                    <div class="subject">
-
-                                        ${item.matkul}
-
-                                    </div>
-
-
-                                    <div class="lecturer">
-
-                                        ${item.dosen}
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        `;
-
-                    }
-                ).join("");
-
-        }
-
-
-        /*
-            Masukkan ke card
-        */
-
-        card.innerHTML = `
-
-            <div class="day-head">
-
-                <h3>
-
-                    ${displayDay}
-
-                    ${
-                        day === todayKey
-                        ? " • HARI INI"
-                        : ""
-                    }
-
-                </h3>
-
-
-                <p>
-                    ${note}
-                </p>
-
-            </div>
-
-
-            ${rows}
-
-        `;
-
-
-        container.appendChild(card);
-
-    });
 
 }
 
 
+/* =========================================================
+   COUNTDOWN MENUJU KELAS BERIKUTNYA
+========================================================= */
 
-// ======================================================
-// UPDATE LIVE CARD
-// ======================================================
-
-function updateLiveClass() {
-
-    const active =
-        getActiveClass();
-
+function updateNextCountdown() {
 
     const next =
-        getNextScheduledClass();
-
-
-    const badge =
-        document.getElementById(
-            "liveBadge"
-        );
-
-
-    const title =
-        document.getElementById(
-            "liveTitle"
-        );
-
-
-    const lecturer =
-        document.getElementById(
-            "liveLecturer"
-        );
-
-
-    const status =
-        document.getElementById(
-            "status"
-        );
+        findNextClass();
 
 
     const countdown =
@@ -1139,428 +1237,215 @@ function updateLiveClass() {
         );
 
 
-    const progressBar =
-        document.getElementById(
-            "progressBar"
-        );
+    if (!countdown) {
+        return;
+    }
 
 
-    const liveStart =
-        document.getElementById(
-            "liveStart"
-        );
-
-
-    const liveEnd =
-        document.getElementById(
-            "liveEnd"
-        );
-
-
-    const livePercent =
-        document.getElementById(
-            "livePercent"
-        );
-
-
-    /*
-        ================================================
-        ADA KELAS YANG SEDANG BERLANGSUNG
-        ================================================
-    */
-
-    if (active) {
-
-        badge.textContent =
-            "● SEDANG BERLANGSUNG";
-
-
-        badge.classList.remove(
-            "waiting"
-        );
-
-
-        title.textContent =
-            active.matkul;
-
-
-        lecturer.textContent =
-            active.dosen;
-
-
-        const start =
-            timeToSeconds(
-                active.mulai
-            );
-
-
-        const end =
-            timeToSeconds(
-                active.selesai
-            );
-
-
-        const now =
-            getCurrentSeconds();
-
-
-        const duration =
-            end - start;
-
-
-        const elapsed =
-            now - start;
-
-
-        const remaining =
-            end - now;
-
-
-        const percent =
-            Math.min(
-                100,
-                Math.max(
-                    0,
-                    (elapsed / duration) * 100
-                )
-            );
-
-
-        status.textContent =
-            "Selesai dalam";
-
+    if (!next) {
 
         countdown.textContent =
-            formatCountdown(
-                remaining
-            );
+            "--:--:--";
+
+        return;
+
+    }
 
 
-        progressBar.style.width =
-            `${percent}%`;
+    const now =
+        new Date();
 
 
-        liveStart.textContent =
-            active.mulai;
+    const difference =
+        next.start.getTime() -
+        now.getTime();
 
 
-        liveEnd.textContent =
-            active.selesai;
+    if (difference <= 0) {
+
+        countdown.textContent =
+            "Sebentar lagi...";
+
+        return;
+
+    }
 
 
-        livePercent.textContent =
-            `${Math.round(percent)}%`;
+    const totalSeconds =
+        Math.floor(
+            difference / 1000
+        );
 
 
-        /*
-            Hapus highlight lama
-        */
+    const days =
+        Math.floor(
+            totalSeconds / 86400
+        );
 
-        document
-            .querySelectorAll(
-                ".schedule-row.active"
-            )
-            .forEach(row => {
 
-                row.classList.remove(
+    const hours =
+        Math.floor(
+            (totalSeconds % 86400) / 3600
+        );
+
+
+    const minutes =
+        Math.floor(
+            (totalSeconds % 3600) / 60
+        );
+
+
+    const seconds =
+        totalSeconds % 60;
+
+
+    if (days > 0) {
+
+        countdown.textContent =
+            `${days} hari ${formatTwoDigits(hours)}:${formatTwoDigits(minutes)}:${formatTwoDigits(seconds)}`;
+
+    }
+
+    else {
+
+        countdown.textContent =
+            `${formatTwoDigits(hours)}:${formatTwoDigits(minutes)}:${formatTwoDigits(seconds)}`;
+
+    }
+
+}
+
+
+/* =========================================================
+   UPDATE NEXT CLASS CARD
+========================================================= */
+
+function updateNextDisplay(
+    next
+) {
+
+    const detail =
+        document.getElementById(
+            "nextClassDetail"
+        );
+
+    const lecturer =
+        document.getElementById(
+            "nextClassLecturer"
+        );
+
+    const time =
+        document.getElementById(
+            "nextClassTime"
+        );
+
+
+    if (detail) {
+
+        detail.textContent =
+            next.item.subject;
+
+    }
+
+
+    if (lecturer) {
+
+        lecturer.textContent =
+            next.item.lecturer ||
+            "-";
+
+    }
+
+
+    if (time) {
+
+        time.textContent =
+            `${next.item.start} – ${next.item.end}`;
+
+    }
+
+}
+
+
+/* =========================================================
+   PROGRAM BUTTON
+========================================================= */
+
+document.querySelectorAll(
+    ".program-btn"
+).forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            /*
+               Hapus active dari semua tombol.
+            */
+
+            document.querySelectorAll(
+                ".program-btn"
+            ).forEach(btn => {
+
+                btn.classList.remove(
                     "active"
                 );
 
             });
 
 
-        /*
-            Highlight kelas aktif
-        */
+            /*
+               Aktifkan tombol yang diklik.
+            */
 
-        const today =
-            keyHari[
-                getTodayIndex()
-            ];
-
-
-        const activeRow =
-            document.querySelector(
-                `.schedule-row[data-day="${today}"][data-start="${active.mulai}"]`
-            );
-
-
-        if (activeRow) {
-
-            activeRow.classList.add(
+            button.classList.add(
                 "active"
             );
 
-        }
+
+            /*
+               Ganti program.
+            */
+
+            currentProgram =
+                button.dataset.program;
 
 
-        return;
+            /*
+               Render ulang jadwal.
+            */
 
-    }
-
-
-
-    /*
-        ================================================
-        TIDAK ADA KELAS SEDANG BERLANGSUNG
-        ================================================
-    */
-
-    document
-        .querySelectorAll(
-            ".schedule-row.active"
-        )
-        .forEach(row => {
-
-            row.classList.remove(
-                "active"
-            );
-
-        });
-
-
-    progressBar.style.width =
-        "0%";
-
-
-    livePercent.textContent =
-        "0%";
-
-
-
-    /*
-        ================================================
-        ADA KELAS BERIKUTNYA
-        ================================================
-    */
-
-    if (next) {
-
-        const current =
-            getCurrentSeconds();
-
-
-        const nextStart =
-            timeToSeconds(
-                next.item.mulai
-            );
-
-
-        /*
-            86400 = jumlah detik
-            dalam 1 hari
-        */
-
-        const totalSeconds =
-            nextStart -
-            current +
-            (
-                next.offset *
-                24 *
-                60 *
-                60
-            );
-
-
-        badge.textContent =
-            "○ KELAS BERIKUTNYA";
-
-
-        badge.classList.add(
-            "waiting"
-        );
-
-
-        title.textContent =
-            next.item.matkul;
-
-
-        lecturer.textContent =
-            next.item.dosen;
-
-
-        /*
-            Kalau masih hari ini
-        */
-
-        if (
-            next.offset === 0
-        ) {
-
-            status.textContent =
-                "Mulai dalam";
+            renderSchedule();
 
         }
-
-        else {
-
-            const today =
-                getTodayIndex();
-
-
-            const target =
-                (
-                    today +
-                    next.offset
-                ) % 7;
-
-
-            status.textContent =
-                `Mulai ${namaHari[target]}`;
-
-        }
-
-
-        countdown.textContent =
-            formatCountdown(
-                totalSeconds
-            );
-
-
-        liveStart.textContent =
-            next.item.mulai;
-
-
-        liveEnd.textContent =
-            next.item.selesai;
-
-
-        return;
-
-    }
-
-
-
-    /*
-        ================================================
-        SEMUA JADWAL SELESAI
-        ================================================
-    */
-
-    badge.textContent =
-        "✓ SELESAI";
-
-
-    badge.classList.add(
-        "waiting"
     );
 
-
-    title.textContent =
-        "Jadwal selesai";
+});
 
 
-    lecturer.textContent =
-        "Sampai jumpa di kelas berikutnya.";
+/* =========================================================
+   UPDATE OTOMATIS
+========================================================= */
+
+/*
+   Jam dan countdown diperbarui
+   setiap 1 detik.
+*/
+
+setInterval(() => {
+
+    updateDateTime();
+
+    renderSchedule();
+
+}, 1000);
 
 
-    status.textContent =
-        "Tidak ada kelas berikutnya";
+/* =========================================================
+   JALANKAN SAAT HALAMAN DIBUKA
+========================================================= */
 
-
-    countdown.textContent =
-        "--:--:--";
-
-
-    liveStart.textContent =
-        "--:--";
-
-
-    liveEnd.textContent =
-        "--:--";
-
-}
-
-
-
-// ======================================================
-// TOMBOL PIAUD / PAI
-// ======================================================
-
-document
-    .querySelectorAll(".prodi-btn")
-    .forEach(button => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                /*
-                    Ambil prodi
-                    dari data-prodi
-                */
-
-                prodiAktif =
-                    button.dataset.prodi;
-
-
-                /*
-                    Hilangkan active
-                    dari semua tombol
-                */
-
-                document
-                    .querySelectorAll(
-                        ".prodi-btn"
-                    )
-                    .forEach(btn => {
-
-                        btn.classList.remove(
-                            "active"
-                        );
-
-                    });
-
-
-                /*
-                    Aktifkan tombol
-                    yang diklik
-                */
-
-                button.classList.add(
-                    "active"
-                );
-
-
-                /*
-                    Render ulang
-                */
-
-                renderSchedule();
-
-
-                updateLiveClass();
-
-            }
-        );
-
-    });
-
-
-
-// ======================================================
-// PROGRAM DIMULAI
-// ======================================================
+updateDateTime();
 
 renderSchedule();
 
-updateClock();
-
-updateLiveClass();
-
-
-
-// ======================================================
-// UPDATE SETIAP 1 DETIK
-// ======================================================
-
-setInterval(
-    () => {
-
-        updateClock();
-
-        updateLiveClass();
-
-    },
-    1000
-);
