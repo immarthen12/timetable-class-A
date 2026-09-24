@@ -2,14 +2,12 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="assets/tarbiyatunnisalogo.png">
 
-    <!-- Wajib agar responsive di HP -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jadwal Semester 7A</title>
 
-    <link rel="icon" href="tarbiyatunnisa.png">
+    <link rel="icon" type="image/png" href="tarbiyatunnisa.png">
 
     <!-- Bootstrap Icons -->
     <link
@@ -22,25 +20,36 @@
 
 <body>
 
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="bi bi-calendar3"></i>
+                </div>
+
+                <div>
+                    <h1>Jadwal Semester 7A</h1>
+                    <p>PAI & PIAUD · Sabtu — Minggu</p>
+                </div>
+            </div>
+
+            <!-- Dark / Light -->
+            <button id="themeToggle" class="theme-toggle" type="button">
+                <i id="themeIcon" class="bi bi-moon-stars-fill"></i>
+                <span id="themeText">Dark</span>
+            </button>
+
+        </div>
+    </header>
+
+
     <main class="container">
 
-        <!-- HEADER -->
-        <header class="header">
-            <div>
-                <p class="eyebrow">SISTEM JADWAL PERKULIAHAN</p>
-                <h1>Jadwal Semester 7A (PAI) & 7D (PIAUD)</h1>
-                <p class="subtitle">PAI & PIAUD · Sabtu — Minggu</p>
-            </div>
-
-            <div class="week-badge">
-                <span>Pekan</span>
-                <strong id="weekNumber">1</strong>
-            </div>
-        </header>
-
-
-        <!-- RUNNING TEXT -->
+        <!-- ================= RUNNING TEXT ================= -->
         <section class="running-box">
+
             <div class="running-label">
                 <i class="bi bi-megaphone-fill"></i>
             </div>
@@ -50,105 +59,173 @@
                     Memuat pesan...
                 </div>
             </div>
+
         </section>
 
 
-        <!-- FOTO KELAS -->
-        <section class="class-photo">
-            <div class="photo-wrapper">
+        <!-- ================= FOTO KELAS ================= -->
+        <section class="class-photo-card">
 
-                <img
-                    src="assets/foto-kelas.jpg"
-                    alt="Foto Kelas Eduversity A23"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                >
+            <img
+                src="assets/foto-kelas.jpg"
+                alt="Foto kelas Semester 7A"
+                id="classPhoto"
+            >
 
-                <div class="photo-placeholder">
-                    <i class="bi bi-image"></i>
-                    <strong>Foto Kelas</strong>
-                    <span>
-                        Tambahkan foto kelas di
-                        <code>assets/foto-kelas.jpg</code>
-                    </span>
-                </div>
-
+            <div id="photoFallback" class="photo-fallback">
+                <i class="bi bi-image"></i>
+                <span>Foto kelas belum ditambahkan</span>
             </div>
+
         </section>
 
 
-        <!-- INFO WAKTU -->
+        <!-- ================= INFO ================= -->
         <section class="info-grid">
 
             <div class="info-card">
+
                 <div class="info-icon">
-                    <i class="bi bi-calendar3"></i>
+                    <i class="bi bi-calendar-event"></i>
                 </div>
 
                 <div>
-                    <span>Hari, Tanggal</span>
+                    <span>Tanggal</span>
                     <strong id="currentDate">-</strong>
                 </div>
+
             </div>
 
 
             <div class="info-card">
+
                 <div class="info-icon">
                     <i class="bi bi-clock"></i>
                 </div>
 
                 <div>
-                    <span>Jam</span>
+                    <span>Waktu Sekarang</span>
                     <strong id="currentTime">-</strong>
                 </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+
+                <div>
+                    <span>ini jangan dianggap</span>
+                    <span>Pekan Sekarang</span>
+                    <span>karena sedang error</span>
+                    <strong id="currentWeek">-</strong>
+                </div>
+
             </div>
 
         </section>
 
 
-        <!-- COUNTDOWN -->
+        <!-- ================= COUNTDOWN ================= -->
         <section class="countdown-card">
 
-            <div class="countdown-title">
-                <i class="bi bi-hourglass-split"></i>
+            <div class="countdown-heading">
+                <div class="countdown-icon">
+                    <i class="bi bi-stopwatch-fill"></i>
+                </div>
 
                 <div>
-                    <span id="countdownLabel">Menuju kelas berikutnya</span>
-                    <strong id="nextClassName">-</strong>
+                    <span id="countdownLabel">Memuat...</span>
+                    <h2 id="nextClassName">-</h2>
                 </div>
             </div>
 
             <div id="countdown" class="countdown">
-                --:--:--
+                00:00:00
+            </div>
+
+            <div class="countdown-detail">
+
+                <span id="nextClassDetail">
+                    -
+                </span>
+
+                <span id="nextClassLecturer">
+                    -
+                </span>
+
+                <span id="nextClassTime">
+                    -
+                </span>
+
             </div>
 
         </section>
 
 
-        <!-- PROGRAM STUDI -->
-        <section class="program-section">
+        <!-- ================= WEEK SWITCH ================= -->
+        <section class="control-section">
 
-            <div class="section-heading">
-                <div>
-                    <span class="section-label">PROGRAM STUDI</span>
-                    <h2>Pilih Prodi</h2>
-                </div>
+            <div class="control-title">
+                <span>Pekan yang Dilihat</span>
+                <small id="weekAutoInfo">
+                    Otomatis mengikuti pekan sekarang
+                </small>
             </div>
 
-            <div class="program-tabs">
+            <div class="week-switch">
+
+                <button
+                    class="week-btn"
+                    data-week="1"
+                    type="button"
+                >
+                    <i class="bi bi-1-circle"></i>
+                    Pekan 1
+                </button>
+
+                <button
+                    class="week-btn"
+                    data-week="2"
+                    type="button"
+                >
+                    <i class="bi bi-2-circle"></i>
+                    Pekan 2
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROGRAM SWITCH ================= -->
+        <section class="control-section">
+
+            <div class="control-title">
+                <span>Program Studi</span>
+                <small>Ganti jadwal PAI / PIAUD</small>
+            </div>
+
+            <div class="program-switch">
 
                 <button
                     class="program-btn active"
                     data-program="PAI"
+                    type="button"
                 >
-                    <i class="bi bi-book"></i>
+                    <i class="bi bi-mortarboard-fill"></i>
                     PAI
                 </button>
 
                 <button
                     class="program-btn"
                     data-program="PIAUD"
+                    type="button"
                 >
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-people-fill"></i>
                     PIAUD
                 </button>
 
@@ -157,119 +234,147 @@
         </section>
 
 
-        <!-- JADWAL -->
+        <!-- ================= JADWAL ================= -->
         <section class="schedule-section">
 
-            <div class="section-heading schedule-heading">
+            <div class="section-heading">
                 <div>
-                    <span class="section-label">JADWAL PEKAN <span id="scheduleWeek">1</span></span>
-                    <h2 id="programTitle">PAI</h2>
+                    <span class="section-label">JADWAL KULIAH</span>
+                    <h2 id="scheduleTitle">
+                        PAI · Pekan 1
+                    </h2>
                 </div>
-
-                <span id="scheduleStatus" class="status-badge">
-                    Jadwal Aktif
-                </span>
             </div>
 
 
-            <!-- SABTU -->
-            <div class="day-section">
+            <div class="schedule-grid">
 
-                <div class="day-title">
-                    <div>
-                        <span>HARI</span>
-                        <h3>Sabtu</h3>
+                <!-- SABTU -->
+                <div class="day-card">
+
+                    <div class="day-header">
+                        <div>
+                            <span class="day-number">01</span>
+                            <h3>Sabtu</h3>
+                        </div>
+
+                        <span id="saturdayStatus" class="today-badge">
+                            -
+                        </span>
                     </div>
 
-                    <i class="bi bi-calendar-event"></i>
-                </div>
-
-                <div id="saturdaySchedule" class="schedule-list"></div>
-
-            </div>
-
-
-            <!-- MINGGU -->
-            <div class="day-section">
-
-                <div class="day-title">
-                    <div>
-                        <span>HARI</span>
-                        <h3>Minggu</h3>
+                    <div
+                        id="saturdaySchedule"
+                        class="schedule-list"
+                    >
+                        <!-- JS -->
                     </div>
 
-                    <i class="bi bi-calendar-event"></i>
                 </div>
 
-                <div id="sundaySchedule" class="schedule-list"></div>
+
+                <!-- MINGGU -->
+                <div class="day-card">
+
+                    <div class="day-header">
+                        <div>
+                            <span class="day-number">02</span>
+                            <h3>Minggu</h3>
+                        </div>
+
+                        <span id="sundayStatus" class="today-badge">
+                            -
+                        </span>
+                    </div>
+
+                    <div
+                        id="sundaySchedule"
+                        class="schedule-list"
+                    >
+                        <!-- JS -->
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- KETERANGAN -->
+        <!-- ================= NEXT CLASS ================= -->
+        <section class="next-class-card">
+
+            <div class="next-class-icon">
+                <i class="bi bi-arrow-right-circle-fill"></i>
+            </div>
+
+            <div class="next-class-content">
+
+                <span>MATKUL BERIKUTNYA</span>
+
+                <h3 id="nextClassDetailBottom">
+                    -
+                </h3>
+
+                <p id="nextClassLecturerBottom">
+                    -
+                </p>
+
+                <strong id="nextClassTimeBottom">
+                    -
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LEGEND ================= -->
         <section class="legend">
 
-            <div class="legend-item">
+            <div>
                 <span class="legend-dot ongoing"></span>
                 Sedang berlangsung
             </div>
 
-            <div class="legend-item">
+            <div>
                 <span class="legend-dot next"></span>
                 Selanjutnya
             </div>
 
-            <div class="legend-item">
+            <div>
                 <span class="legend-dot finished"></span>
                 Selesai
             </div>
 
         </section>
 
-
-        <!-- NEXT CLASS -->
-        <section class="next-class-card">
-
-            <div class="next-icon">
-                <i class="bi bi-arrow-right-circle"></i>
-            </div>
-
-            <div class="next-content">
-                <span>Pekan yang akan datang</span>
-                <h3 id="nextClassDetail">Belum ada informasi</h3>
-                <p id="nextClassLecturer">-</p>
-            </div>
-
-            <div class="next-time" id="nextClassTime">
-                --
-            </div>
-
-        </section>
-
-
-        <!-- FOOTER -->
-        <footer>
-
-            <div class="footer-left">
-                <span>Made with struggle.</span>
-            </div>
-
-            <div class="footer-right">
-                <a
-                    href="https://instagram.com/eduversity_a23"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i class="bi bi-instagram"></i>
-                    Eduversity_A23
-                </a>
-            </div>
-
-        </footer>
-
     </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <strong>Semester 7A</strong>
+                <span>Made with struggle. 🗿</span>
+            </div>
+
+            <a
+                href="https://instagram.com/USERNAME_IG_KELAS"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="bi bi-instagram"></i>
+                Eduversity_A23
+            </a>
+
+        </div>
+
+    </footer>
+
 
     <script src="script.js"></script>
 
