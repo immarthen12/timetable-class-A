@@ -2,493 +2,277 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="assets/tarbiyatunnisalogo.png">
+
+    <!-- Wajib agar responsive di HP -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jadwal Semester 7</title>
-<style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  .container { display: block; text-align: left; width: 650px; margin: 0 auto; }  
-  .font{font-family: 'Times New Roman', cursive;}
-  .LOGO{font-family: 'Libre Barcode 128 Text', cursive;}
-  a { color: #0366d6; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
-<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet">
-<div class='container'>
-    <h1 class="LOGO">Sistem Mata Kuliah<span> Undermaintenanced</span></h1> 
-    <h1>Kami akan kembali segera mungkin!</h1>
-    <div class='font'>
-        <p>Mohon maaf atas ketidaknyamanannya, dikarenakan selalu ada perubahan dari dosen yang tidak jelas. Developer pun jadi bingung🤦‍♂️ <a href="wa.me/6287885154209">contact us</a>
-        , kami akan memperbaikinya secepat mungkin</p>
-        <p>&mdash; eduversity_a23</p>
-    </div>
-</div>
+    <title>Jadwal Semester 7A</title>
 
-    <!-- Favicon -->
-    
-    <!-- <link rel="icon" href="./tarbiyatunnisa.png"> -->
+    <link rel="icon" href="tarbiyatunnisa.png">
 
     <!-- Bootstrap Icons -->
-    <!-- <link
+    <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    > -->
+    >
 
-    <!-- CSS -->
-    <!-- <link rel="stylesheet" href="style.css">
-</head> -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<!-- <body> -->
+<body>
 
-    <!-- ================= HEADER ================= -->
-    <!-- <header class="hero"> -->
+    <main class="container">
 
-        <!-- <div class="hero-content"> -->
+        <!-- HEADER -->
+        <header class="header">
+            <div>
+                <p class="eyebrow">SISTEM JADWAL PERKULIAHAN</p>
+                <h1>Jadwal Semester 7A</h1>
+                <p class="subtitle">PAI & PIAUD · Sabtu — Minggu</p>
+            </div>
 
-            <!-- Foto kelas -->
-            <!-- <img -->
-                <!-- src="./foto-kelas.jpeg"
-                alt="Foto Kelas"
-                class="class-photo"
-            > -->
+            <div class="week-badge">
+                <span>Pekan</span>
+                <strong id="weekNumber">1</strong>
+            </div>
+        </header>
 
-            <!-- <p class="eyebrow">
-                STIT TARBIYATUNNISA
-            </p> -->
 
-            <!-- <h1>
-                Jadwal Semester 7
-            </h1>
+        <!-- RUNNING TEXT -->
+        <section class="running-box">
+            <div class="running-label">
+                <i class="bi bi-megaphone-fill"></i>
+            </div>
 
-            <div class="running-text">
-                <span>📢</span>
-                <div id="runningText">Loading...</div>
-            </div> -->
+            <div class="running-window">
+                <div id="runningText" class="running-text">
+                    Memuat pesan...
+                </div>
+            </div>
+        </section>
 
-            <!-- <p class="subtitle">
-                PIAUD & PAI
-            </p>
 
-            <!-- Jam -->
-            <!-- <div class="clock-box">
+        <!-- FOTO KELAS -->
+        <section class="class-photo">
+            <div class="photo-wrapper">
 
-                <div id="clock">
-                    00:00:00
-                </div> --> 
+                <img
+                    src="assets/foto-kelas.jpg"
+                    alt="Foto Kelas Eduversity A23"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                >
 
-                <!-- <div id="date">
-                    Memuat tanggal...
+                <div class="photo-placeholder">
+                    <i class="bi bi-image"></i>
+                    <strong>Foto Kelas</strong>
+                    <span>
+                        Tambahkan foto kelas di
+                        <code>assets/foto-kelas.jpg</code>
+                    </span>
                 </div>
 
-                <small>
-                    Waktu Indonesia Barat (WIB)
-                </small>
+            </div>
+        </section>
 
+
+        <!-- INFO WAKTU -->
+        <section class="info-grid">
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="bi bi-calendar3"></i>
+                </div>
+
+                <div>
+                    <span>Hari, Tanggal</span>
+                    <strong id="currentDate">-</strong>
+                </div>
             </div>
 
-        </div>
 
-    </header> -->
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="bi bi-clock"></i>
+                </div>
 
+                <div>
+                    <span>Jam</span>
+                    <strong id="currentTime">-</strong>
+                </div>
+            </div>
 
-    <!-- ================= CONTENT ================= -->
-
-    <!-- <main class="container"> -->
-
-        <!-- Pilihan Prodi -->
-        <!-- <nav class="prodi-nav">
-
-            <button
-                class="prodi-btn active"
-                data-prodi="piaud"
-            >
-                <i class="bi bi-mortarboard-fill"></i>
-                PIAUD
-            </button> -->
-
-            <!-- <button
-                class="prodi-btn"
-                data-prodi="pai"
-            >
-                <i class="bi bi-book-fill"></i>
-                PAI
-            </button>
-
-        </nav> -->
+        </section>
 
 
-        <!-- ================= LIVE / COUNTDOWN ================= -->
+        <!-- COUNTDOWN -->
+        <section class="countdown-card">
 
-        <!-- <section class="live-card">
+            <div class="countdown-title">
+                <i class="bi bi-hourglass-split"></i>
 
-            <div class="live-top">
+                <div>
+                    <span id="countdownLabel">Menuju kelas berikutnya</span>
+                    <strong id="nextClassName">-</strong>
+                </div>
+            </div>
 
-                <span
-                    id="liveBadge"
-                    class="live-badge"
+            <div id="countdown" class="countdown">
+                --:--:--
+            </div>
+
+        </section>
+
+
+        <!-- PROGRAM STUDI -->
+        <section class="program-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">PROGRAM STUDI</span>
+                    <h2>Pilih Prodi</h2>
+                </div>
+            </div>
+
+            <div class="program-tabs">
+
+                <button
+                    class="program-btn active"
+                    data-program="PAI"
                 >
-                    ● LIVE
-                </span> -->
-
-                <!-- <span id="prodiLabel">
-                    
-                </span>
-
-            </div>
-
-
-            <h2 id="liveTitle">
-                Memuat...
-            </h2>
-
-            <p id="liveLecturer">
-                Memuat jadwal...
-            </p> -->
-
-
-            <!-- <div
-                id="status"
-                class="countdown-label"
-            >
-                Memuat...
-            </div>
-
-
-            <div
-                id="countdown"
-                class="countdown"
-            >
-                00:00:00
-            </div> -->
-
-
-            <!-- Progress -->
-            <!-- <div class="progress-wrap">
-
-                <div
-                    id="progressBar"
-                    class="progress-bar"
-                ></div>
-
-            </div>
-
-
-            <div class="live-times">
-
-                <span id="liveStart">
-                    --:--
-                </span>
-
-                <span id="livePercent">
-                    0%
-                </span>
-
-                <span id="liveEnd">
-                    --:--
-                </span>
-
-            </div>
-
-        </section> -->
-
-
-        <!-- ================= JADWAL ================= -->
-
-        <!-- <section class="today-card">
-
-            <div>
-
-                <span class="section-kicker">
-                    PROGRAM STUDI
-                </span>
-
-                <h2 id="todayTitle">
+                    <i class="bi bi-book"></i>
                     PAI
-                </h2>
+                </button>
+
+                <button
+                    class="program-btn"
+                    data-program="PIAUD"
+                >
+                    <i class="bi bi-people"></i>
+                    PIAUD
+                </button>
 
             </div>
 
-            <div
-                id="todayType"
-                class="today-type"
-            >
-                -
+        </section>
+
+
+        <!-- JADWAL -->
+        <section class="schedule-section">
+
+            <div class="section-heading schedule-heading">
+                <div>
+                    <span class="section-label">JADWAL PEKAN <span id="scheduleWeek">1</span></span>
+                    <h2 id="programTitle">PAI</h2>
+                </div>
+
+                <span id="scheduleStatus" class="status-badge">
+                    Jadwal Aktif
+                </span>
             </div>
 
-        </section> -->
+
+            <!-- SABTU -->
+            <div class="day-section">
+
+                <div class="day-title">
+                    <div>
+                        <span>HARI</span>
+                        <h3>Sabtu</h3>
+                    </div>
+
+                    <i class="bi bi-calendar-event"></i>
+                </div>
+
+                <div id="saturdaySchedule" class="schedule-list"></div>
+
+            </div>
 
 
-        <!-- Jadwal akan dibuat otomatis oleh JavaScript -->
-<!-- 
-        <section id="scheduleContainer"></section>
+            <!-- MINGGU -->
+            <div class="day-section">
 
-    </main> -->
+                <div class="day-title">
+                    <div>
+                        <span>HARI</span>
+                        <h3>Minggu</h3>
+                    </div>
 
+                    <i class="bi bi-calendar-event"></i>
+                </div>
 
-    <!-- ================= FOOTER ================= -->
+                <div id="sundaySchedule" class="schedule-list"></div>
 
-    <!-- <footer>
+            </div>
 
-        <p>
-            Semester 7A • PIAUD & PAI
-        </p>
-
-        <p>
-
-            <a
-                href="https://www.instagram.com/eduversity_a23/"
-                target="_blank"
-            >
-                <i class="bi bi-instagram"></i>
-                @eduversity_a23
-            </a>
-
-        </p>
-
-    </footer>
+        </section>
 
 
-    <!-- JavaScript -->
-    <!-- <script src="script.js"></script>
+        <!-- KETERANGAN -->
+        <section class="legend">
+
+            <div class="legend-item">
+                <span class="legend-dot ongoing"></span>
+                Sedang berlangsung
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot next"></span>
+                Selanjutnya
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot finished"></span>
+                Selesai
+            </div>
+
+        </section>
+
+
+        <!-- NEXT CLASS -->
+        <section class="next-class-card">
+
+            <div class="next-icon">
+                <i class="bi bi-arrow-right-circle"></i>
+            </div>
+
+            <div class="next-content">
+                <span>Selanjutnya</span>
+                <h3 id="nextClassDetail">Belum ada informasi</h3>
+                <p id="nextClassLecturer">-</p>
+            </div>
+
+            <div class="next-time" id="nextClassTime">
+                --
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="footer-left">
+                <span>Made with struggle.</span>
+            </div>
+
+            <div class="footer-right">
+                <a
+                    href="https://instagram.com/eduversity_a23"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="bi bi-instagram"></i>
+                    Eduversity_A23
+                </a>
+            </div>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
-</html> --> 
-
-
-
-<!-- BACK UP-DATA // -->
-<!-- <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jadwal Pelajaran Semester 6A</title>
-    <link rel="icon" href="./tarbiyatunnisa.png"/>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: linear-gradient(to right, #8360c3, #2ebf91);
-        color: #333;
-      }
-      header {
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        font-size: 1.8rem;
-        letter-spacing: 1px;
-      }
-      h1 {
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        font-size: 2.5rem;
-        letter-spacing: 1px;
-      }
-      .container {
-        max-width: 900px;
-        margin: 40px auto;
-        background: #fff;
-        padding: 20px 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        animation: fadeIn 1s ease;
-      }
-      h2 {
-        margin-top: 30px;
-        color: #444;
-        border-left: 5px solid #2ebf91;
-        padding-left: 10px;
-        font-size: 1.3rem;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 15px 0;
-      }
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
-      }
-      th {
-        background: #2ebf91;
-        color: #fff;
-      }
-      tr:hover {
-        background: #f0f9f6;
-        transform: scale(1.01);
-        transition: 0.3s;
-      }
-      footer {
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-      }
-      footer a {
-        color: #ff69b4;
-        text-decoration: none;
-        transition: 0.3s;
-      }
-      footer a:hover {
-        color: #fff;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header> UNDER MAINTENANCE </header>
-    <!-- <header>📘 Jadwal Pelajaran - Semester 6A</header>
-    <div class="container">
-      <h2> Sabtu, 8 Agustus 2026</h2>
-      <table>
-        <tr>
-          <th>Waktu</th>
-          <th>Mata Kuliah</th>
-          <th>Dosen</th>
-        </tr>
-        <tr>
-          <td>14:00 - 15:00</td>
-          <td>Micro Teaching</td>
-          <td>Saefudin, S.Pd., M.Pd.</td>
-        </tr>
-        <tr>
-          <td>15:00 - 16:00</td>
-          <td>Bahasa Arab</td>
-          <td>M. Abduh Al Manar, M.Pd.</td>
-        </tr>
-        <tr>
-          <td>16:00 - 16:30</td>
-          <td><i>ISTIRAHAT!!!</i></td>
-        </tr>
-        <tr>
-          <td>16:30 - 17:30</td>
-          <td>Pembelajaran Fiqih</td>
-          <td>Rahmatullah Noor Hidayat, MA.</td>
-        </tr>
-      </table>
-
-      <h2>Minggu, 9 Agustus 2026</h2>
-      <table>
-        <tr>
-          <th>Waktu</th>
-          <th>Mata Kuliah</th>
-          <th>Dosen</th>
-        </tr>
-        <tr>
-          <td>10:00 - 11:00</td>
-          <td>Pengembangan Minat dan Bakat</td>
-          <td>Tety Srihayati, S.Pd., M.Pd.</td>
-        </tr>
-        <tr>
-          <td>11:00 - 12:00</td>
-           <td>Komunikasi Pembelajaran</td>
-          <td>Ahdan Abdul Ghani, S.Pd.</td>
-        </tr>
-      </table>
-
-      <h2>Sabtu, 15 Agustus 2026</h2>
-      <table>
-        <tr>
-          <th>Waktu</th>
-          <th>Mata Kuliah</th>
-          <th>Dosen</th>
-        </tr>
-        <tr>
-          <td>14:00 - 15:00</td>
-          <td>Pembelajaran PAI</td>
-          <td>Nurhasanah, S.Pd.</td>
-        </tr>
-        <tr>
-          <td>15:00 - 16:00</td>
-          <td>Pendidikan Jasmani</td>
-          <td>M. Dede Haris Saputra, S.T</td>
-        </tr>
-        <tr>
-          <td>16:00 - 16:30</td>
-          <td><i>ISTIRAHAT!!!</i></td>
-        </tr>
-        <tr>
-          <td>16:30 - 17:30</td>
-          <td>Penelitian Tindakan Kelas</td>
-          <td> Yandra, S.Pd.I, M.Pd.</td>
-        </tr>
-      </table>
-      
-      <h2>Minggu, 16 Agustus 2026</h2>
-      <table>
-        <tr>
-          <th>Waktu</th>
-          <th>Mata Kuliah</th>
-          <th>Dosen</th>
-        </tr>
-        <tr>
-          <td>10:00-11:00</td>
-          <td>Metode Pengembangan Berpikir</td>
-          <td>Aries Setiawan, SE.,MM./Eni Nuraeni,S.Pd.</td>
-        </tr>
-        <tr>
-          <td>11:00 - 12:00</td>
-          <td>Kesehatan Gizi Anak</td>
-          <td>Sri Widiyastuti, S.Pd., M.Pd</td>
-        </tr>
-      </table>
-
-      
-    <footer>
-      <p>&copy; 2026 Semester 6A</p>
-      <a href="https://www.instagram.com/6a_stit_tn/" target="_blank">
-        <i class="bi bi-instagram"></i> Instagram
-      </a>
-      <a href="https://www.instagram.com/imrizkymaulana/">
-      <p> Design By Class 6-A</p></a>
-    </footer>
-  </body>
 </html>
-
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- -->
+```
